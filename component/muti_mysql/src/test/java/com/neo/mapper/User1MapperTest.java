@@ -2,7 +2,8 @@ package com.neo.mapper;
 
 import com.neo.entity.UserEntity;
 import com.neo.enums.UserSexEnum;
-import com.neo.mapper.test2.User2Mapper;
+import com.neo.mapper.test1.User1Mapper;
+import java.util.List;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -10,14 +11,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.List;
-
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class User2MapperTest {
+public class User1MapperTest {
 
 	@Autowired
-	private User2Mapper userMapper;
+	private User1Mapper userMapper;
 
 	@Test
 	public void testInsert() throws Exception {
@@ -34,18 +33,18 @@ public class User2MapperTest {
 		if(users==null || users.size()==0){
 			System.out.println("is null");
 		}else{
-			System.out.println(users.toString());
+			System.out.println(users.size());
 		}
 	}
 	
 	
 	@Test
 	public void testUpdate() throws Exception {
-		UserEntity user = userMapper.getOne(6l);
+		UserEntity user = userMapper.getOne(3l);
 		System.out.println(user.toString());
 		user.setNickName("neo");
 		userMapper.update(user);
-		Assert.assertTrue(("neo".equals(userMapper.getOne(6l).getNickName())));
+		Assert.assertTrue(("neo".equals(userMapper.getOne(3l).getNickName())));
 	}
 
 }

@@ -1,12 +1,11 @@
-package com.neo.mapper.test1;
+package com.neo.mapper.test2;
 
 import com.neo.entity.UserEntity;
-
 import java.util.List;
 import org.springframework.stereotype.Service;
 
 @Service
-public interface User1Mapper {
+public interface User2Mapper {
 	
 	List<UserEntity> getAll();
 	
