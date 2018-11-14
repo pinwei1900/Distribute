@@ -22,7 +22,7 @@ public class UserController {
     @Autowired
     private User1Repo user1Repo;
 	
-	@RequestMapping("/getUsers")
+	@RequestMapping("/getUsers"  )
 	public List<UserEntity> getUsers() {
 		List<UserEntity> users=user1Repo.getAll();
 		return users;
