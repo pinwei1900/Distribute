@@ -41,29 +41,28 @@ import org.springframework.shell.standard.commands.StandardCommandsAutoConfigura
  */
 @Configuration
 @Import({
-		// Core runtime
-		SpringShellAutoConfiguration.class,
-		JLineShellAutoConfiguration.class,
-		// Various Resolvers
-		JCommanderParameterResolverAutoConfiguration.class,
-		LegacyAdapterAutoConfiguration.class,
-		StandardAPIAutoConfiguration.class,
-		// Built-In Commands
-		StandardCommandsAutoConfiguration.class,
-		// Allows ${} support
-		PropertyPlaceholderAutoConfiguration.class,
-		// Sample Commands
-		JCommanderCommands.class,
-		LegacyCommands.class,
-		Commands.class,
-		FileValueProvider.class,
-		DynamicCommands.class,
-		TableCommands.class,
-		})
+        // Core runtime
+        SpringShellAutoConfiguration.class,
+        JLineShellAutoConfiguration.class,
+        // Various Resolvers
+        JCommanderParameterResolverAutoConfiguration.class,
+        LegacyAdapterAutoConfiguration.class,
+        StandardAPIAutoConfiguration.class,
+        // Built-In Commands
+        StandardCommandsAutoConfiguration.class,
+        // Allows ${} support
+        PropertyPlaceholderAutoConfiguration.class,
+        // Sample Commands
+        JCommanderCommands.class,
+        LegacyCommands.class,
+        Commands.class,
+        FileValueProvider.class,
+        DynamicCommands.class,
+        TableCommands.class,
+})
 public class NoAutoConf {
-
-	public static void main(String[] args) {
-		ConfigurableApplicationContext context = SpringApplication.run(NoAutoConf.class, args);
-	}
+    public static void main(String[] args) {
+        ConfigurableApplicationContext context = SpringApplication.run(NoAutoConf.class, args);
+    }
 
 }
