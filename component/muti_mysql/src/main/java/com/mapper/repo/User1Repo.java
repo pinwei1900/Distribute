@@ -25,34 +25,37 @@ public class User1Repo {
     @Qualifier("test1SqlSessionFactory")
     private SqlSessionFactory sqlSessionFactory;
 
+    private String full(String name) {
+        return "com.mapper.test1.User1Mapper." + name;
+    }
 
     public List<UserEntity> getAll() {
         try (SqlSession session = sqlSessionFactory.openSession()) {
-            return session.selectList("com.neo.mapper.test1.User1Mapper.getAll");
+            return session.selectList(full("getAll"));
         }
     }
 
     public UserEntity getOne(Long id) {
         try (SqlSession session = sqlSessionFactory.openSession()) {
-            return session.selectOne("com.neo.mapper.test1.User1Mapper.getOne", id);
+            return session.selectOne(full("getOne"), id);
         }
     }
 
     public void insert(UserEntity user) {
         try (SqlSession session = sqlSessionFactory.openSession()) {
-            session.insert("com.neo.mapper.test1.User1Mapper.insert", user);
+            session.insert(full("insert"), user);
         }
     }
 
     public void update(UserEntity user) {
         try (SqlSession session = sqlSessionFactory.openSession()) {
-            session.update("com.neo.mapper.test1.User1Mapper.update", user);
+            session.update(full("update"), user);
         }
     }
 
     public void delete(Long id) {
         try (SqlSession session = sqlSessionFactory.openSession()) {
-            session.delete("com.neo.mapper.test1.User1Mapper.delete", id);
+            session.delete(full("delete"), id);
         }
     }
 }
