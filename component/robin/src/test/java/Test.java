@@ -33,7 +33,7 @@ public class Test {
         in = socket.getInputStream();
         //读取
         builder.setType(1);
-        builder.setKey("hhhh");
+        builder.setKey("hhhh2");
         request = builder.build();
         request.writeDelimitedTo(out);
 
