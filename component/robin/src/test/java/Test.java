@@ -8,7 +8,6 @@ import robin.protobuf.RobinRequestProto.RobinRequest.Builder;
 import robin.protobuf.RobinRequestProto.RobinResponse;
 
 public class Test {
-
     public static void main(String[] args) throws IOException {
         Socket socket = new Socket("127.0.0.1" , 5010);
         OutputStream out = socket.getOutputStream();
@@ -18,7 +17,7 @@ public class Test {
 
         //写入
         builder.setType(2);
-        builder.setKey("hhhh2");
+        builder.setKey("hhhh");
         builder.setContent(ByteString.copyFromUtf8("hello world"));
         RobinRequest request = builder.build();
         request.writeDelimitedTo(out);
