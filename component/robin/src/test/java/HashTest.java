@@ -5,6 +5,7 @@
 
 import com.google.common.hash.Hashing;
 import java.util.ArrayList;
+import org.junit.Test;
 import robin.utils.ConsistentHash;
 
 /**
@@ -14,7 +15,9 @@ import robin.utils.ConsistentHash;
  * @Version 1.0.0
  */
 public class HashTest {
-    public static void main(String[] args) {
+
+    @Test
+    public void hashTest() {
         ArrayList<String> nodeList = new ArrayList<>();
         nodeList.add("www.google.com.hk");
         nodeList.add("www.apple.com.cn");
