@@ -3,13 +3,16 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.Socket;
+import org.junit.Test;
 import robin.protobuf.RobinRequestProto.RobinRequest;
 import robin.protobuf.RobinRequestProto.RobinRequest.Builder;
 import robin.protobuf.RobinRequestProto.RobinResponse;
 
-public class Test {
-    public static void main(String[] args) throws IOException {
-        Socket socket = new Socket("127.0.0.1" , 5010);
+public class SocketTest {
+
+    @Test
+    public void socketTest() throws IOException {
+        Socket socket = new Socket("127.0.0.1", 5010);
         OutputStream out = socket.getOutputStream();
         InputStream in = socket.getInputStream();
 
@@ -26,8 +29,7 @@ public class Test {
         response.getContent().writeTo(System.out);
         socket.close();
 
-
-        socket = new Socket("127.0.0.1" , 5010);
+        socket = new Socket("127.0.0.1", 5010);
         out = socket.getOutputStream();
         in = socket.getInputStream();
         //读取
