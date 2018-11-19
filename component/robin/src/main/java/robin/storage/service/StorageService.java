@@ -4,6 +4,7 @@
  */
 package robin.storage.service;
 
+import java.util.concurrent.atomic.AtomicLong;
 import robin.storage.entry.ObjectEntry;
 
 /**
@@ -13,6 +14,10 @@ import robin.storage.entry.ObjectEntry;
  * @Version 1.0.0
  */
 public interface StorageService {
+
     void put(String key, ObjectEntry value);
+
     ObjectEntry get(String key);
+
+    AtomicLong version();
 }

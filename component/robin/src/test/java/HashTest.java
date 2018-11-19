@@ -6,7 +6,7 @@
 import com.google.common.hash.Hashing;
 import java.util.ArrayList;
 import org.junit.Test;
-import robin.utils.ConsistentHash;
+import robin.utils.ConsistHash;
 
 /**
  * @Description
@@ -23,7 +23,7 @@ public class HashTest {
         nodeList.add("www.apple.com.cn");
         nodeList.add("twitter.com");
         nodeList.add("weibo.com");
-        ConsistentHash<String> consistentHash = new ConsistentHash<>(Hashing.md5(), 100, nodeList);
-        System.out.println(consistentHash.get(12));
+        ConsistHash<String> consistHash = new ConsistHash<>(Hashing.md5(), 100, nodeList);
+        System.out.println(consistHash.get(12));
     }
 }

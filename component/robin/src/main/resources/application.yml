@@ -5,3 +5,7 @@ spring:
 robin:
   port: 5010
   strategy: 'simple'
+  binlog:
+    file: 'E:\GoogleDriverSync\Distribute\data.txt'
+  slave:
+    port: 5011

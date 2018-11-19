@@ -13,6 +13,7 @@ import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import robin.backup.BinLogerProcessor;
 import robin.protobuf.RobinRequestProto;
 import robin.protobuf.RobinRequestProto.RobinRequest;
 import robin.protobuf.RobinRequestProto.RobinResponse;
@@ -32,12 +33,11 @@ public class ServiceBootstrap {
     @Value("${robin.port}")
     Integer port;
 
-    @Value("1024")
-    int BUFFER_LENGTH;
-
     @Autowired
     private StorageService storageService;
 
+    @Autowired
+    private BinLogerProcessor binLogerProcessor;
 
     @PostConstruct
     public void run() throws IOException {
@@ -47,7 +47,6 @@ public class ServiceBootstrap {
             new HandlerThread(socket);
         }
     }
-
 
     class HandlerThread implements Runnable{
         Socket socket;
@@ -64,11 +63,17 @@ public class ServiceBootstrap {
                 Builder resBuild = RobinResponse.newBuilder();
                 switch (request.getType()) {
                     case 1:  //读取
-                        resBuild.setContent(ByteString.copyFrom(storageService.get(request.getKey()).getContent()));
-                        resBuild.setType(1);
+                        ObjectEntry value = storageService.get(request.getKey());
+                        if (value != null) {
+                            resBuild.setContent(ByteString.copyFrom(storageService.get(request.getKey()).getContent()));
+                            resBuild.setType(1);
+                        } else {
+                            resBuild.setType(100);
+                        }
                         break;
                     case 2:   //写入
                         storageService.put(request.getKey(),new ObjectEntry(request.getContent().toByteArray()));
+                        binLogerProcessor.motifyLog(request);
                         resBuild.setType(2);
                         resBuild.setContent(ByteString.copyFromUtf8("write ok"));
                         break;

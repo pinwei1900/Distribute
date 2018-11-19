@@ -39,7 +39,9 @@ public class SocketTest {
         request.writeDelimitedTo(out);
 
         response = RobinResponse.parseDelimitedFrom(in);
-        response.getContent().writeTo(System.out);
+        if (response != null) {
+            response.getContent().writeTo(System.out);
+        }
         socket.close();
     }
 }

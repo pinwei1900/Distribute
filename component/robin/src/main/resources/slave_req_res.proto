@@ -1,0 +1,14 @@
+syntax = "proto2";
+
+option java_package = "robin.protobuf";
+option java_outer_classname = "SlaveProto";
+
+message SlaveRequest {
+  required int64 version = 1;
+}
+
+message SlaveResponse {
+  required int64 version = 1;
+  required int32 op = 2;
+  optional bytes data = 3;
+}
