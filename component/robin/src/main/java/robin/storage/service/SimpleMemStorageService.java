@@ -5,14 +5,19 @@
 package robin.storage.service;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
+import javax.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
+import org.springframework.stereotype.Service;
 import robin.backup.BinLogger;
 import robin.protobuf.RobinRequestProto.RobinRequest;
+import robin.storage.anotition.SimpleStore;
 import robin.storage.entry.ObjectEntry;
 
 /**
@@ -22,6 +27,8 @@ import robin.storage.entry.ObjectEntry;
  * @Version 1.0.0
  */
 @Slf4j
+@Service
+@ConditionalOnBean(annotation = SimpleStore.class)
 public class SimpleMemStorageService implements StorageService {
 
     private ConcurrentHashMap<String, ObjectEntry> memStore = new ConcurrentHashMap<>();
@@ -32,13 +39,19 @@ public class SimpleMemStorageService implements StorageService {
     @Autowired
     private BinLogger binLogger;
 
-    @Override
-    public void restore(RobinRequest request) {
-        memStore.put(request.getKey(), new ObjectEntry(request.getContent().toByteArray()));
+
+    @PostConstruct
+    public void warmUp() throws IOException {
+        try (InputStream in = binLogger.in()) {
+            RobinRequest req;
+            while ((req = RobinRequest.parseDelimitedFrom(in)) != null) {
+                memStore.put(req.getKey(), new ObjectEntry(req.getContent().toByteArray()));
+            }
+        }
     }
 
     @Override
-    public void store(RobinRequest request) throws IOException {
+    public void store(RobinRequest request) {
         /** 保证日志写入顺序 */
         lock.lock();
         memStore.put(request.getKey(), new ObjectEntry(request.getContent().toByteArray()));

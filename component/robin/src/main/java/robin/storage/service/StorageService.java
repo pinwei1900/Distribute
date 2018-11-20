@@ -16,8 +16,6 @@ import robin.storage.entry.ObjectEntry;
  */
 public interface StorageService {
 
-    void restore(RobinRequest request);
-
     void store(RobinRequest request) throws IOException;
 
     ObjectEntry get(String key);

@@ -9,6 +9,7 @@ import java.util.logging.Logger;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import robin.storage.anotition.SimpleStore;
 
 /**
  * @Description
@@ -17,6 +18,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @Version 1.0.0
  */
 @SpringBootApplication
+@SimpleStore
 public class RobinApplication implements CommandLineRunner {
     Logger logger = Logger.getLogger(this.getClass().getName());
 

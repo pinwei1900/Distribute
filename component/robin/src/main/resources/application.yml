@@ -4,7 +4,6 @@ spring:
 
 robin:
   port: 5010
-  strategy: 'simple'
   binlog:
     file: 'G:\Google Drive\workspace\binlog\data.data'
   slave:
