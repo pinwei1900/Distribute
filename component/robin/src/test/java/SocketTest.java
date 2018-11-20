@@ -20,7 +20,7 @@ public class SocketTest {
 
         //写入
         builder.setType(2);
-        builder.setKey("hhhh");
+        builder.setKey("hhhh2");
         builder.setContent(ByteString.copyFromUtf8("hello world"));
         RobinRequest request = builder.build();
         request.writeDelimitedTo(out);

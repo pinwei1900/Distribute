@@ -6,6 +6,6 @@ robin:
   port: 5010
   strategy: 'simple'
   binlog:
-    file: 'E:\GoogleDriverSync\Distribute\data.txt'
+    file: 'G:\Google Drive\workspace\binlog\data.data'
   slave:
     port: 5011

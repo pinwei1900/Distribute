@@ -19,5 +19,5 @@ public interface StorageService {
 
     ObjectEntry get(String key);
 
-    AtomicLong version();
+    long version();
 }

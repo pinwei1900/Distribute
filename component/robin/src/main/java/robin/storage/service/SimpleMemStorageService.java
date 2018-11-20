@@ -33,7 +33,7 @@ public class SimpleMemStorageService implements StorageService {
     }
 
     @Override
-    public AtomicLong version() {
-        return version;
+    public long version() {
+        return version.get();
     }
 }

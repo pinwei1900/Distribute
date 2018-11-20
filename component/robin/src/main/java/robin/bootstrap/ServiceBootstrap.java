@@ -13,7 +13,7 @@ import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-import robin.backup.BinLogerProcessor;
+import robin.backup.BinLogger;
 import robin.protobuf.RobinRequestProto;
 import robin.protobuf.RobinRequestProto.RobinRequest;
 import robin.protobuf.RobinRequestProto.RobinResponse;
@@ -37,7 +37,7 @@ public class ServiceBootstrap {
     private StorageService storageService;
 
     @Autowired
-    private BinLogerProcessor binLogerProcessor;
+    private BinLogger binLogger;
 
     @PostConstruct
     public void run() throws IOException {
@@ -73,7 +73,7 @@ public class ServiceBootstrap {
                         break;
                     case 2:   //写入
                         storageService.put(request.getKey(),new ObjectEntry(request.getContent().toByteArray()));
-                        binLogerProcessor.motifyLog(request);
+                        request.writeDelimitedTo(binLogger.out());//这个操作应该使用spring的切面进行，不应该影响正常的业务流程
                         resBuild.setType(2);
                         resBuild.setContent(ByteString.copyFromUtf8("write ok"));
                         break;

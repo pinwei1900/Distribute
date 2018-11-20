@@ -8,7 +8,12 @@ message SlaveRequest {
 }
 
 message SlaveResponse {
+  message RobinRequest {
+    required int32 type = 1;
+    required string key = 2;
+    optional bytes content = 3;
+  }
   required int64 version = 1;
   required int32 op = 2;
-  optional bytes data = 3;
+  repeated RobinRequest data = 3;
 }
