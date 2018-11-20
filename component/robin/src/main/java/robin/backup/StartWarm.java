@@ -4,13 +4,13 @@
  */
 package robin.backup;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 import robin.protobuf.RobinRequestProto.RobinRequest;
-import robin.storage.entry.ObjectEntry;
 import robin.storage.service.StorageService;
 
 /**
@@ -19,7 +19,7 @@ import robin.storage.service.StorageService;
  * @Date 2018/11/20
  * @Version 1.0.0
  */
-@Service
+@Component
 public class StartWarm {
 
     @Autowired
@@ -29,14 +29,12 @@ public class StartWarm {
     private StorageService storageService;
 
     @PostConstruct
-    public void warm() {
+    public void warm() throws IOException {
         try (InputStream in = binLogger.in()) {
             RobinRequest req;
             while ((req = RobinRequest.parseDelimitedFrom(in)) != null) {
-                storageService.put(req.getKey(), new ObjectEntry(req.getContent().toByteArray()));
+                storageService.restore(req);
             }
-        } catch (IOException e) {
-            e.printStackTrace();//启动预热失败
         }
     }
 }

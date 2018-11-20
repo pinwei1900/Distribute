@@ -4,11 +4,9 @@
  */
 package robin.storage.config;
 
-import java.io.IOException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import robin.backup.BinLogger;
 import robin.storage.service.SimpleMemStorageService;
 import robin.storage.service.StorageService;
 

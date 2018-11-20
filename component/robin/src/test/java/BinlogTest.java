@@ -23,13 +23,10 @@ public class BinlogTest {
 
     BinLogger binLogger;
 
-    public BinlogTest() throws IOException {
-        binLogger = new BinLogger("G:\\Google Drive\\workspace\\binlog\\data.data");
-    }
+
 
     @Test
     public void writeTest() throws IOException {
-
         OutputStream out = binLogger.out();
         for (int i = 0; i < 10; i++) {
             Builder builder = SlaveResponse.newBuilder();

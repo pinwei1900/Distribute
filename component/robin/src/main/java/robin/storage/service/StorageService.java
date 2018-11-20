@@ -4,7 +4,8 @@
  */
 package robin.storage.service;
 
-import java.util.concurrent.atomic.AtomicLong;
+import java.io.IOException;
+import robin.protobuf.RobinRequestProto.RobinRequest;
 import robin.storage.entry.ObjectEntry;
 
 /**
@@ -15,7 +16,9 @@ import robin.storage.entry.ObjectEntry;
  */
 public interface StorageService {
 
-    void put(String key, ObjectEntry value);
+    void restore(RobinRequest request);
+
+    void store(RobinRequest request) throws IOException;
 
     ObjectEntry get(String key);
 
