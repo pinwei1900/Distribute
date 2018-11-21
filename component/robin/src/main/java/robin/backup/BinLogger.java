@@ -16,6 +16,8 @@ import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import robin.protobuf.RobinRequestProto.RobinRequest;
+import robin.protobuf.RonbinLoggerProto.RonbinRecord;
+import robin.protobuf.RonbinLoggerProto.RonbinRecord.Builder;
 
 /**
  * @Description
@@ -29,7 +31,9 @@ public class BinLogger {
     @Value("${robin.binlog.file}")
     private String path;
     private File binFile;
-    private LinkedBlockingDeque<RobinRequest> binQueue;
+    private LinkedBlockingDeque<RonbinRecord> binQueue;
+
+    private Builder logBuilder;
 
     /** 输出流只能有一个，用于顺序写操作日志 */
     private FileOutputStream out;
@@ -42,12 +46,13 @@ public class BinLogger {
         }
         binQueue = new LinkedBlockingDeque<>();
         out = new FileOutputStream(binFile, true);
+        logBuilder = RonbinRecord.newBuilder();
 
         new Thread(() -> {
             while (true) {
                 try {
-                    RobinRequest request = binQueue.take();
-                    request.writeDelimitedTo(out);
+                    RonbinRecord record = binQueue.take();
+                    record.writeDelimitedTo(out);
                 } catch (InterruptedException | IOException e) {
                     e.printStackTrace();
                 }
@@ -55,9 +60,11 @@ public class BinLogger {
         }, "record-storage-update").start();
     }
 
-    public void append(RobinRequest request) {
+    public void append(long version, RobinRequest request) {
         try {
-            binQueue.put(request);
+            logBuilder.setVersion(version);
+            logBuilder.setRequest(request);
+            binQueue.put(logBuilder.build());
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -67,5 +74,9 @@ public class BinLogger {
      * 返回文件的输入流，需要手动关闭此流  */
     public InputStream in() throws FileNotFoundException {
         return new FileInputStream(binFile);
+    }
+
+    public OutputStream out() {
+        return out;
     }
 }

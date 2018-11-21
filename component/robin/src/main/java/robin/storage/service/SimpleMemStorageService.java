@@ -53,7 +53,7 @@ public class SimpleMemStorageService implements StorageService {
         /** 保证日志写入顺序 */
         lock.lock();
         memStore.put(request.getKey(), new ObjectEntry(request.getContent().toByteArray()));
-        binLogger.append(request);
+        binLogger.append(version.get(), request);
         lock.unlock();
     }
 

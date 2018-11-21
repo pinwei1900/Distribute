@@ -15,7 +15,7 @@ public final class SlaveProto {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   public interface SlaveRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:SlaveRequest)
+      // @@protoc_insertion_point(interface_extends:robin.protobuf.SlaveRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -28,11 +28,11 @@ public final class SlaveProto {
     long getVersion();
   }
   /**
-   * Protobuf type {@code SlaveRequest}
+   * Protobuf type {@code robin.protobuf.SlaveRequest}
    */
   public  static final class SlaveRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:SlaveRequest)
+      // @@protoc_insertion_point(message_implements:robin.protobuf.SlaveRequest)
       SlaveRequestOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use SlaveRequest.newBuilder() to construct.
@@ -43,7 +43,7 @@ public final class SlaveProto {
       version_ = 0L;
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -54,7 +54,7 @@ public final class SlaveProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new NullPointerException();
+        throw new java.lang.NullPointerException();
       }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
@@ -93,15 +93,15 @@ public final class SlaveProto {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return SlaveProto.internal_static_SlaveRequest_descriptor;
+      return robin.protobuf.SlaveProto.internal_static_robin_protobuf_SlaveRequest_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return SlaveProto.internal_static_SlaveRequest_fieldAccessorTable
+      return robin.protobuf.SlaveProto.internal_static_robin_protobuf_SlaveRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              SlaveRequest.class, Builder.class);
+              robin.protobuf.SlaveProto.SlaveRequest.class, robin.protobuf.SlaveProto.SlaveRequest.Builder.class);
     }
 
     private int bitField0_;
@@ -121,7 +121,7 @@ public final class SlaveProto {
     }
 
     private byte memoizedIsInitialized = -1;
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -135,7 +135,7 @@ public final class SlaveProto {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -144,7 +144,7 @@ public final class SlaveProto {
       unknownFields.writeTo(output);
     }
 
-    @Override
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -159,15 +159,15 @@ public final class SlaveProto {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof SlaveRequest)) {
+      if (!(obj instanceof robin.protobuf.SlaveProto.SlaveRequest)) {
         return super.equals(obj);
       }
-      SlaveRequest other = (SlaveRequest) obj;
+      robin.protobuf.SlaveProto.SlaveRequest other = (robin.protobuf.SlaveProto.SlaveRequest) obj;
 
       boolean result = true;
       result = result && (hasVersion() == other.hasVersion());
@@ -179,7 +179,7 @@ public final class SlaveProto {
       return result;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -196,69 +196,69 @@ public final class SlaveProto {
       return hash;
     }
 
-    public static SlaveRequest parseFrom(
+    public static robin.protobuf.SlaveProto.SlaveRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static SlaveRequest parseFrom(
+    public static robin.protobuf.SlaveProto.SlaveRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static SlaveRequest parseFrom(
+    public static robin.protobuf.SlaveProto.SlaveRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static SlaveRequest parseFrom(
+    public static robin.protobuf.SlaveProto.SlaveRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static SlaveRequest parseFrom(byte[] data)
+    public static robin.protobuf.SlaveProto.SlaveRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static SlaveRequest parseFrom(
+    public static robin.protobuf.SlaveProto.SlaveRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static SlaveRequest parseFrom(java.io.InputStream input)
+    public static robin.protobuf.SlaveProto.SlaveRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static SlaveRequest parseFrom(
+    public static robin.protobuf.SlaveProto.SlaveRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static SlaveRequest parseDelimitedFrom(java.io.InputStream input)
+    public static robin.protobuf.SlaveProto.SlaveRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static SlaveRequest parseDelimitedFrom(
+    public static robin.protobuf.SlaveProto.SlaveRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static SlaveRequest parseFrom(
+    public static robin.protobuf.SlaveProto.SlaveRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static SlaveRequest parseFrom(
+    public static robin.protobuf.SlaveProto.SlaveRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -266,44 +266,44 @@ public final class SlaveProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @Override
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(SlaveRequest prototype) {
+    public static Builder newBuilder(robin.protobuf.SlaveProto.SlaveRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @Override
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
     /**
-     * Protobuf type {@code SlaveRequest}
+     * Protobuf type {@code robin.protobuf.SlaveRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:SlaveRequest)
-        SlaveRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:robin.protobuf.SlaveRequest)
+        robin.protobuf.SlaveProto.SlaveRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return SlaveProto.internal_static_SlaveRequest_descriptor;
+        return robin.protobuf.SlaveProto.internal_static_robin_protobuf_SlaveRequest_descriptor;
       }
 
-      @Override
-      protected FieldAccessorTable
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return SlaveProto.internal_static_SlaveRequest_fieldAccessorTable
+        return robin.protobuf.SlaveProto.internal_static_robin_protobuf_SlaveRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                SlaveRequest.class, Builder.class);
+                robin.protobuf.SlaveProto.SlaveRequest.class, robin.protobuf.SlaveProto.SlaveRequest.Builder.class);
       }
 
       // Construct using robin.protobuf.SlaveProto.SlaveRequest.newBuilder()
@@ -312,7 +312,7 @@ public final class SlaveProto {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -321,7 +321,7 @@ public final class SlaveProto {
                 .alwaysUseFieldBuilders) {
         }
       }
-      @Override
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         version_ = 0L;
@@ -329,29 +329,29 @@ public final class SlaveProto {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return SlaveProto.internal_static_SlaveRequest_descriptor;
+        return robin.protobuf.SlaveProto.internal_static_robin_protobuf_SlaveRequest_descriptor;
       }
 
-      @Override
-      public SlaveRequest getDefaultInstanceForType() {
-        return SlaveRequest.getDefaultInstance();
+      @java.lang.Override
+      public robin.protobuf.SlaveProto.SlaveRequest getDefaultInstanceForType() {
+        return robin.protobuf.SlaveProto.SlaveRequest.getDefaultInstance();
       }
 
-      @Override
-      public SlaveRequest build() {
-        SlaveRequest result = buildPartial();
+      @java.lang.Override
+      public robin.protobuf.SlaveProto.SlaveRequest build() {
+        robin.protobuf.SlaveProto.SlaveRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @Override
-      public SlaveRequest buildPartial() {
-        SlaveRequest result = new SlaveRequest(this);
+      @java.lang.Override
+      public robin.protobuf.SlaveProto.SlaveRequest buildPartial() {
+        robin.protobuf.SlaveProto.SlaveRequest result = new robin.protobuf.SlaveProto.SlaveRequest(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -363,50 +363,50 @@ public final class SlaveProto {
         return result;
       }
 
-      @Override
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
-      @Override
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
-      @Override
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
-      @Override
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
-      @Override
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof SlaveRequest) {
-          return mergeFrom((SlaveRequest)other);
+        if (other instanceof robin.protobuf.SlaveProto.SlaveRequest) {
+          return mergeFrom((robin.protobuf.SlaveProto.SlaveRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(SlaveRequest other) {
-        if (other == SlaveRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(robin.protobuf.SlaveProto.SlaveRequest other) {
+        if (other == robin.protobuf.SlaveProto.SlaveRequest.getDefaultInstance()) return this;
         if (other.hasVersion()) {
           setVersion(other.getVersion());
         }
@@ -415,7 +415,7 @@ public final class SlaveProto {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public final boolean isInitialized() {
         if (!hasVersion()) {
           return false;
@@ -423,16 +423,16 @@ public final class SlaveProto {
         return true;
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        SlaveRequest parsedMessage = null;
+        robin.protobuf.SlaveProto.SlaveRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (SlaveRequest) e.getUnfinishedMessage();
+          parsedMessage = (robin.protobuf.SlaveProto.SlaveRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -474,35 +474,35 @@ public final class SlaveProto {
         onChanged();
         return this;
       }
-      @Override
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @Override
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:SlaveRequest)
+      // @@protoc_insertion_point(builder_scope:robin.protobuf.SlaveRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:SlaveRequest)
-    private static final SlaveRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:robin.protobuf.SlaveRequest)
+    private static final robin.protobuf.SlaveProto.SlaveRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new SlaveRequest();
+      DEFAULT_INSTANCE = new robin.protobuf.SlaveProto.SlaveRequest();
     }
 
-    public static SlaveRequest getDefaultInstance() {
+    public static robin.protobuf.SlaveProto.SlaveRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    @Deprecated public static final com.google.protobuf.Parser<SlaveRequest>
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<SlaveRequest>
         PARSER = new com.google.protobuf.AbstractParser<SlaveRequest>() {
-      @Override
+      @java.lang.Override
       public SlaveRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -515,20 +515,20 @@ public final class SlaveProto {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<SlaveRequest> getParserForType() {
       return PARSER;
     }
 
-    @Override
-    public SlaveRequest getDefaultInstanceForType() {
+    @java.lang.Override
+    public robin.protobuf.SlaveProto.SlaveRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface SlaveResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:SlaveResponse)
+      // @@protoc_insertion_point(interface_extends:robin.protobuf.SlaveResponse)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -550,35 +550,35 @@ public final class SlaveProto {
     int getOp();
 
     /**
-     * <code>repeated .SlaveResponse.RobinRequest data = 3;</code>
+     * <code>repeated .robin.protobuf.RobinRequest data = 3;</code>
      */
-    java.util.List<SlaveResponse.RobinRequest>
+    java.util.List<robin.protobuf.RobinRequestProto.RobinRequest> 
         getDataList();
     /**
-     * <code>repeated .SlaveResponse.RobinRequest data = 3;</code>
+     * <code>repeated .robin.protobuf.RobinRequest data = 3;</code>
      */
-    SlaveResponse.RobinRequest getData(int index);
+    robin.protobuf.RobinRequestProto.RobinRequest getData(int index);
     /**
-     * <code>repeated .SlaveResponse.RobinRequest data = 3;</code>
+     * <code>repeated .robin.protobuf.RobinRequest data = 3;</code>
      */
     int getDataCount();
     /**
-     * <code>repeated .SlaveResponse.RobinRequest data = 3;</code>
+     * <code>repeated .robin.protobuf.RobinRequest data = 3;</code>
      */
-    java.util.List<? extends SlaveResponse.RobinRequestOrBuilder>
+    java.util.List<? extends robin.protobuf.RobinRequestProto.RobinRequestOrBuilder> 
         getDataOrBuilderList();
     /**
-     * <code>repeated .SlaveResponse.RobinRequest data = 3;</code>
+     * <code>repeated .robin.protobuf.RobinRequest data = 3;</code>
      */
-    SlaveResponse.RobinRequestOrBuilder getDataOrBuilder(
-            int index);
+    robin.protobuf.RobinRequestProto.RobinRequestOrBuilder getDataOrBuilder(
+        int index);
   }
   /**
-   * Protobuf type {@code SlaveResponse}
+   * Protobuf type {@code robin.protobuf.SlaveResponse}
    */
   public  static final class SlaveResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:SlaveResponse)
+      // @@protoc_insertion_point(message_implements:robin.protobuf.SlaveResponse)
       SlaveResponseOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use SlaveResponse.newBuilder() to construct.
@@ -591,7 +591,7 @@ public final class SlaveProto {
       data_ = java.util.Collections.emptyList();
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -602,7 +602,7 @@ public final class SlaveProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new NullPointerException();
+        throw new java.lang.NullPointerException();
       }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
@@ -627,11 +627,11 @@ public final class SlaveProto {
             }
             case 26: {
               if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-                data_ = new java.util.ArrayList<RobinRequest>();
+                data_ = new java.util.ArrayList<robin.protobuf.RobinRequestProto.RobinRequest>();
                 mutable_bitField0_ |= 0x00000004;
               }
               data_.add(
-                  input.readMessage(RobinRequest.PARSER, extensionRegistry));
+                  input.readMessage(robin.protobuf.RobinRequestProto.RobinRequest.PARSER, extensionRegistry));
               break;
             }
             default: {
@@ -658,789 +658,15 @@ public final class SlaveProto {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return SlaveProto.internal_static_SlaveResponse_descriptor;
+      return robin.protobuf.SlaveProto.internal_static_robin_protobuf_SlaveResponse_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return SlaveProto.internal_static_SlaveResponse_fieldAccessorTable
+      return robin.protobuf.SlaveProto.internal_static_robin_protobuf_SlaveResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              SlaveResponse.class, Builder.class);
-    }
-
-    public interface RobinRequestOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:SlaveResponse.RobinRequest)
-        com.google.protobuf.MessageOrBuilder {
-
-      /**
-       * <code>required int32 type = 1;</code>
-       */
-      boolean hasType();
-      /**
-       * <code>required int32 type = 1;</code>
-       */
-      int getType();
-
-      /**
-       * <code>required string key = 2;</code>
-       */
-      boolean hasKey();
-      /**
-       * <code>required string key = 2;</code>
-       */
-      String getKey();
-      /**
-       * <code>required string key = 2;</code>
-       */
-      com.google.protobuf.ByteString
-          getKeyBytes();
-
-      /**
-       * <code>optional bytes content = 3;</code>
-       */
-      boolean hasContent();
-      /**
-       * <code>optional bytes content = 3;</code>
-       */
-      com.google.protobuf.ByteString getContent();
-    }
-    /**
-     * Protobuf type {@code SlaveResponse.RobinRequest}
-     */
-    public  static final class RobinRequest extends
-        com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:SlaveResponse.RobinRequest)
-        RobinRequestOrBuilder {
-    private static final long serialVersionUID = 0L;
-      // Use RobinRequest.newBuilder() to construct.
-      private RobinRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-        super(builder);
-      }
-      private RobinRequest() {
-        type_ = 0;
-        key_ = "";
-        content_ = com.google.protobuf.ByteString.EMPTY;
-      }
-
-      @Override
-      public final com.google.protobuf.UnknownFieldSet
-      getUnknownFields() {
-        return this.unknownFields;
-      }
-      private RobinRequest(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        this();
-        if (extensionRegistry == null) {
-          throw new NullPointerException();
-        }
-        int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                bitField0_ |= 0x00000001;
-                type_ = input.readInt32();
-                break;
-              }
-              case 18: {
-                com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00000002;
-                key_ = bs;
-                break;
-              }
-              case 26: {
-                bitField0_ |= 0x00000004;
-                content_ = input.readBytes();
-                break;
-              }
-              default: {
-                if (!parseUnknownField(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e).setUnfinishedMessage(this);
-        } finally {
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
-      }
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return SlaveProto.internal_static_SlaveResponse_RobinRequest_descriptor;
-      }
-
-      @Override
-      protected FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return SlaveProto.internal_static_SlaveResponse_RobinRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                RobinRequest.class, Builder.class);
-      }
-
-      private int bitField0_;
-      public static final int TYPE_FIELD_NUMBER = 1;
-      private int type_;
-      /**
-       * <code>required int32 type = 1;</code>
-       */
-      public boolean hasType() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>required int32 type = 1;</code>
-       */
-      public int getType() {
-        return type_;
-      }
-
-      public static final int KEY_FIELD_NUMBER = 2;
-      private volatile Object key_;
-      /**
-       * <code>required string key = 2;</code>
-       */
-      public boolean hasKey() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>required string key = 2;</code>
-       */
-      public String getKey() {
-        Object ref = key_;
-        if (ref instanceof String) {
-          return (String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            key_ = s;
-          }
-          return s;
-        }
-      }
-      /**
-       * <code>required string key = 2;</code>
-       */
-      public com.google.protobuf.ByteString
-          getKeyBytes() {
-        Object ref = key_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
-          key_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      public static final int CONTENT_FIELD_NUMBER = 3;
-      private com.google.protobuf.ByteString content_;
-      /**
-       * <code>optional bytes content = 3;</code>
-       */
-      public boolean hasContent() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      /**
-       * <code>optional bytes content = 3;</code>
-       */
-      public com.google.protobuf.ByteString getContent() {
-        return content_;
-      }
-
-      private byte memoizedIsInitialized = -1;
-      @Override
-      public final boolean isInitialized() {
-        byte isInitialized = memoizedIsInitialized;
-        if (isInitialized == 1) return true;
-        if (isInitialized == 0) return false;
-
-        if (!hasType()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-        if (!hasKey()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-        memoizedIsInitialized = 1;
-        return true;
-      }
-
-      @Override
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
-                          throws java.io.IOException {
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          output.writeInt32(1, type_);
-        }
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, key_);
-        }
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          output.writeBytes(3, content_);
-        }
-        unknownFields.writeTo(output);
-      }
-
-      @Override
-      public int getSerializedSize() {
-        int size = memoizedSize;
-        if (size != -1) return size;
-
-        size = 0;
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeInt32Size(1, type_);
-        }
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, key_);
-        }
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeBytesSize(3, content_);
-        }
-        size += unknownFields.getSerializedSize();
-        memoizedSize = size;
-        return size;
-      }
-
-      @Override
-      public boolean equals(final Object obj) {
-        if (obj == this) {
-         return true;
-        }
-        if (!(obj instanceof RobinRequest)) {
-          return super.equals(obj);
-        }
-        RobinRequest other = (RobinRequest) obj;
-
-        boolean result = true;
-        result = result && (hasType() == other.hasType());
-        if (hasType()) {
-          result = result && (getType()
-              == other.getType());
-        }
-        result = result && (hasKey() == other.hasKey());
-        if (hasKey()) {
-          result = result && getKey()
-              .equals(other.getKey());
-        }
-        result = result && (hasContent() == other.hasContent());
-        if (hasContent()) {
-          result = result && getContent()
-              .equals(other.getContent());
-        }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
-      }
-
-      @Override
-      public int hashCode() {
-        if (memoizedHashCode != 0) {
-          return memoizedHashCode;
-        }
-        int hash = 41;
-        hash = (19 * hash) + getDescriptor().hashCode();
-        if (hasType()) {
-          hash = (37 * hash) + TYPE_FIELD_NUMBER;
-          hash = (53 * hash) + getType();
-        }
-        if (hasKey()) {
-          hash = (37 * hash) + KEY_FIELD_NUMBER;
-          hash = (53 * hash) + getKey().hashCode();
-        }
-        if (hasContent()) {
-          hash = (37 * hash) + CONTENT_FIELD_NUMBER;
-          hash = (53 * hash) + getContent().hashCode();
-        }
-        hash = (29 * hash) + unknownFields.hashCode();
-        memoizedHashCode = hash;
-        return hash;
-      }
-
-      public static RobinRequest parseFrom(
-          java.nio.ByteBuffer data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static RobinRequest parseFrom(
-          java.nio.ByteBuffer data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static RobinRequest parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static RobinRequest parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static RobinRequest parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static RobinRequest parseFrom(
-          byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static RobinRequest parseFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static RobinRequest parseFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static RobinRequest parseDelimitedFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input);
-      }
-      public static RobinRequest parseDelimitedFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static RobinRequest parseFrom(
-          com.google.protobuf.CodedInputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static RobinRequest parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-
-      @Override
-      public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder() {
-        return DEFAULT_INSTANCE.toBuilder();
-      }
-      public static Builder newBuilder(RobinRequest prototype) {
-        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-      }
-      @Override
-      public Builder toBuilder() {
-        return this == DEFAULT_INSTANCE
-            ? new Builder() : new Builder().mergeFrom(this);
-      }
-
-      @Override
-      protected Builder newBuilderForType(
-          BuilderParent parent) {
-        Builder builder = new Builder(parent);
-        return builder;
-      }
-      /**
-       * Protobuf type {@code SlaveResponse.RobinRequest}
-       */
-      public static final class Builder extends
-          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:SlaveResponse.RobinRequest)
-          RobinRequestOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor() {
-          return SlaveProto.internal_static_SlaveResponse_RobinRequest_descriptor;
-        }
-
-        @Override
-        protected FieldAccessorTable
-            internalGetFieldAccessorTable() {
-          return SlaveProto.internal_static_SlaveResponse_RobinRequest_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                  RobinRequest.class, Builder.class);
-        }
-
-        // Construct using robin.protobuf.SlaveProto.SlaveResponse.RobinRequest.newBuilder()
-        private Builder() {
-          maybeForceBuilderInitialization();
-        }
-
-        private Builder(
-            BuilderParent parent) {
-          super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-                  .alwaysUseFieldBuilders) {
-          }
-        }
-        @Override
-        public Builder clear() {
-          super.clear();
-          type_ = 0;
-          bitField0_ = (bitField0_ & ~0x00000001);
-          key_ = "";
-          bitField0_ = (bitField0_ & ~0x00000002);
-          content_ = com.google.protobuf.ByteString.EMPTY;
-          bitField0_ = (bitField0_ & ~0x00000004);
-          return this;
-        }
-
-        @Override
-        public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType() {
-          return SlaveProto.internal_static_SlaveResponse_RobinRequest_descriptor;
-        }
-
-        @Override
-        public RobinRequest getDefaultInstanceForType() {
-          return RobinRequest.getDefaultInstance();
-        }
-
-        @Override
-        public RobinRequest build() {
-          RobinRequest result = buildPartial();
-          if (!result.isInitialized()) {
-            throw newUninitializedMessageException(result);
-          }
-          return result;
-        }
-
-        @Override
-        public RobinRequest buildPartial() {
-          RobinRequest result = new RobinRequest(this);
-          int from_bitField0_ = bitField0_;
-          int to_bitField0_ = 0;
-          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-            to_bitField0_ |= 0x00000001;
-          }
-          result.type_ = type_;
-          if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-            to_bitField0_ |= 0x00000002;
-          }
-          result.key_ = key_;
-          if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-            to_bitField0_ |= 0x00000004;
-          }
-          result.content_ = content_;
-          result.bitField0_ = to_bitField0_;
-          onBuilt();
-          return result;
-        }
-
-        @Override
-        public Builder clone() {
-          return (Builder) super.clone();
-        }
-        @Override
-        public Builder setField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            Object value) {
-          return (Builder) super.setField(field, value);
-        }
-        @Override
-        public Builder clearField(
-            com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
-        }
-        @Override
-        public Builder clearOneof(
-            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
-        }
-        @Override
-        public Builder setRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            int index, Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
-        }
-        @Override
-        public Builder addRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            Object value) {
-          return (Builder) super.addRepeatedField(field, value);
-        }
-        @Override
-        public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof RobinRequest) {
-            return mergeFrom((RobinRequest)other);
-          } else {
-            super.mergeFrom(other);
-            return this;
-          }
-        }
-
-        public Builder mergeFrom(RobinRequest other) {
-          if (other == RobinRequest.getDefaultInstance()) return this;
-          if (other.hasType()) {
-            setType(other.getType());
-          }
-          if (other.hasKey()) {
-            bitField0_ |= 0x00000002;
-            key_ = other.key_;
-            onChanged();
-          }
-          if (other.hasContent()) {
-            setContent(other.getContent());
-          }
-          this.mergeUnknownFields(other.unknownFields);
-          onChanged();
-          return this;
-        }
-
-        @Override
-        public final boolean isInitialized() {
-          if (!hasType()) {
-            return false;
-          }
-          if (!hasKey()) {
-            return false;
-          }
-          return true;
-        }
-
-        @Override
-        public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-          RobinRequest parsedMessage = null;
-          try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (RobinRequest) e.getUnfinishedMessage();
-            throw e.unwrapIOException();
-          } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
-          return this;
-        }
-        private int bitField0_;
-
-        private int type_ ;
-        /**
-         * <code>required int32 type = 1;</code>
-         */
-        public boolean hasType() {
-          return ((bitField0_ & 0x00000001) == 0x00000001);
-        }
-        /**
-         * <code>required int32 type = 1;</code>
-         */
-        public int getType() {
-          return type_;
-        }
-        /**
-         * <code>required int32 type = 1;</code>
-         */
-        public Builder setType(int value) {
-          bitField0_ |= 0x00000001;
-          type_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>required int32 type = 1;</code>
-         */
-        public Builder clearType() {
-          bitField0_ = (bitField0_ & ~0x00000001);
-          type_ = 0;
-          onChanged();
-          return this;
-        }
-
-        private Object key_ = "";
-        /**
-         * <code>required string key = 2;</code>
-         */
-        public boolean hasKey() {
-          return ((bitField0_ & 0x00000002) == 0x00000002);
-        }
-        /**
-         * <code>required string key = 2;</code>
-         */
-        public String getKey() {
-          Object ref = key_;
-          if (!(ref instanceof String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            String s = bs.toStringUtf8();
-            if (bs.isValidUtf8()) {
-              key_ = s;
-            }
-            return s;
-          } else {
-            return (String) ref;
-          }
-        }
-        /**
-         * <code>required string key = 2;</code>
-         */
-        public com.google.protobuf.ByteString
-            getKeyBytes() {
-          Object ref = key_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (String) ref);
-            key_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>required string key = 2;</code>
-         */
-        public Builder setKey(
-            String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-          key_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>required string key = 2;</code>
-         */
-        public Builder clearKey() {
-          bitField0_ = (bitField0_ & ~0x00000002);
-          key_ = getDefaultInstance().getKey();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>required string key = 2;</code>
-         */
-        public Builder setKeyBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-          key_ = value;
-          onChanged();
-          return this;
-        }
-
-        private com.google.protobuf.ByteString content_ = com.google.protobuf.ByteString.EMPTY;
-        /**
-         * <code>optional bytes content = 3;</code>
-         */
-        public boolean hasContent() {
-          return ((bitField0_ & 0x00000004) == 0x00000004);
-        }
-        /**
-         * <code>optional bytes content = 3;</code>
-         */
-        public com.google.protobuf.ByteString getContent() {
-          return content_;
-        }
-        /**
-         * <code>optional bytes content = 3;</code>
-         */
-        public Builder setContent(com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-          content_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional bytes content = 3;</code>
-         */
-        public Builder clearContent() {
-          bitField0_ = (bitField0_ & ~0x00000004);
-          content_ = getDefaultInstance().getContent();
-          onChanged();
-          return this;
-        }
-        @Override
-        public final Builder setUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFields(unknownFields);
-        }
-
-        @Override
-        public final Builder mergeUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.mergeUnknownFields(unknownFields);
-        }
-
-
-        // @@protoc_insertion_point(builder_scope:SlaveResponse.RobinRequest)
-      }
-
-      // @@protoc_insertion_point(class_scope:SlaveResponse.RobinRequest)
-      private static final RobinRequest DEFAULT_INSTANCE;
-      static {
-        DEFAULT_INSTANCE = new RobinRequest();
-      }
-
-      public static RobinRequest getDefaultInstance() {
-        return DEFAULT_INSTANCE;
-      }
-
-      @Deprecated public static final com.google.protobuf.Parser<RobinRequest>
-          PARSER = new com.google.protobuf.AbstractParser<RobinRequest>() {
-        @Override
-        public RobinRequest parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new RobinRequest(input, extensionRegistry);
-        }
-      };
-
-      public static com.google.protobuf.Parser<RobinRequest> parser() {
-        return PARSER;
-      }
-
-      @Override
-      public com.google.protobuf.Parser<RobinRequest> getParserForType() {
-        return PARSER;
-      }
-
-      @Override
-      public RobinRequest getDefaultInstanceForType() {
-        return DEFAULT_INSTANCE;
-      }
-
+              robin.protobuf.SlaveProto.SlaveResponse.class, robin.protobuf.SlaveProto.SlaveResponse.Builder.class);
     }
 
     private int bitField0_;
@@ -1475,42 +701,42 @@ public final class SlaveProto {
     }
 
     public static final int DATA_FIELD_NUMBER = 3;
-    private java.util.List<RobinRequest> data_;
+    private java.util.List<robin.protobuf.RobinRequestProto.RobinRequest> data_;
     /**
-     * <code>repeated .SlaveResponse.RobinRequest data = 3;</code>
+     * <code>repeated .robin.protobuf.RobinRequest data = 3;</code>
      */
-    public java.util.List<RobinRequest> getDataList() {
+    public java.util.List<robin.protobuf.RobinRequestProto.RobinRequest> getDataList() {
       return data_;
     }
     /**
-     * <code>repeated .SlaveResponse.RobinRequest data = 3;</code>
+     * <code>repeated .robin.protobuf.RobinRequest data = 3;</code>
      */
-    public java.util.List<? extends RobinRequestOrBuilder>
+    public java.util.List<? extends robin.protobuf.RobinRequestProto.RobinRequestOrBuilder> 
         getDataOrBuilderList() {
       return data_;
     }
     /**
-     * <code>repeated .SlaveResponse.RobinRequest data = 3;</code>
+     * <code>repeated .robin.protobuf.RobinRequest data = 3;</code>
      */
     public int getDataCount() {
       return data_.size();
     }
     /**
-     * <code>repeated .SlaveResponse.RobinRequest data = 3;</code>
+     * <code>repeated .robin.protobuf.RobinRequest data = 3;</code>
      */
-    public RobinRequest getData(int index) {
+    public robin.protobuf.RobinRequestProto.RobinRequest getData(int index) {
       return data_.get(index);
     }
     /**
-     * <code>repeated .SlaveResponse.RobinRequest data = 3;</code>
+     * <code>repeated .robin.protobuf.RobinRequest data = 3;</code>
      */
-    public RobinRequestOrBuilder getDataOrBuilder(
+    public robin.protobuf.RobinRequestProto.RobinRequestOrBuilder getDataOrBuilder(
         int index) {
       return data_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1534,7 +760,7 @@ public final class SlaveProto {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -1549,7 +775,7 @@ public final class SlaveProto {
       unknownFields.writeTo(output);
     }
 
-    @Override
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1572,15 +798,15 @@ public final class SlaveProto {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof SlaveResponse)) {
+      if (!(obj instanceof robin.protobuf.SlaveProto.SlaveResponse)) {
         return super.equals(obj);
       }
-      SlaveResponse other = (SlaveResponse) obj;
+      robin.protobuf.SlaveProto.SlaveResponse other = (robin.protobuf.SlaveProto.SlaveResponse) obj;
 
       boolean result = true;
       result = result && (hasVersion() == other.hasVersion());
@@ -1599,7 +825,7 @@ public final class SlaveProto {
       return result;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -1624,69 +850,69 @@ public final class SlaveProto {
       return hash;
     }
 
-    public static SlaveResponse parseFrom(
+    public static robin.protobuf.SlaveProto.SlaveResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static SlaveResponse parseFrom(
+    public static robin.protobuf.SlaveProto.SlaveResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static SlaveResponse parseFrom(
+    public static robin.protobuf.SlaveProto.SlaveResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static SlaveResponse parseFrom(
+    public static robin.protobuf.SlaveProto.SlaveResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static SlaveResponse parseFrom(byte[] data)
+    public static robin.protobuf.SlaveProto.SlaveResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static SlaveResponse parseFrom(
+    public static robin.protobuf.SlaveProto.SlaveResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static SlaveResponse parseFrom(java.io.InputStream input)
+    public static robin.protobuf.SlaveProto.SlaveResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static SlaveResponse parseFrom(
+    public static robin.protobuf.SlaveProto.SlaveResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static SlaveResponse parseDelimitedFrom(java.io.InputStream input)
+    public static robin.protobuf.SlaveProto.SlaveResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static SlaveResponse parseDelimitedFrom(
+    public static robin.protobuf.SlaveProto.SlaveResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static SlaveResponse parseFrom(
+    public static robin.protobuf.SlaveProto.SlaveResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static SlaveResponse parseFrom(
+    public static robin.protobuf.SlaveProto.SlaveResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1694,44 +920,44 @@ public final class SlaveProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @Override
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(SlaveResponse prototype) {
+    public static Builder newBuilder(robin.protobuf.SlaveProto.SlaveResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @Override
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
     /**
-     * Protobuf type {@code SlaveResponse}
+     * Protobuf type {@code robin.protobuf.SlaveResponse}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:SlaveResponse)
-        SlaveResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:robin.protobuf.SlaveResponse)
+        robin.protobuf.SlaveProto.SlaveResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return SlaveProto.internal_static_SlaveResponse_descriptor;
+        return robin.protobuf.SlaveProto.internal_static_robin_protobuf_SlaveResponse_descriptor;
       }
 
-      @Override
-      protected FieldAccessorTable
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return SlaveProto.internal_static_SlaveResponse_fieldAccessorTable
+        return robin.protobuf.SlaveProto.internal_static_robin_protobuf_SlaveResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                SlaveResponse.class, Builder.class);
+                robin.protobuf.SlaveProto.SlaveResponse.class, robin.protobuf.SlaveProto.SlaveResponse.Builder.class);
       }
 
       // Construct using robin.protobuf.SlaveProto.SlaveResponse.newBuilder()
@@ -1740,7 +966,7 @@ public final class SlaveProto {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1750,7 +976,7 @@ public final class SlaveProto {
           getDataFieldBuilder();
         }
       }
-      @Override
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         version_ = 0L;
@@ -1766,29 +992,29 @@ public final class SlaveProto {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return SlaveProto.internal_static_SlaveResponse_descriptor;
+        return robin.protobuf.SlaveProto.internal_static_robin_protobuf_SlaveResponse_descriptor;
       }
 
-      @Override
-      public SlaveResponse getDefaultInstanceForType() {
-        return SlaveResponse.getDefaultInstance();
+      @java.lang.Override
+      public robin.protobuf.SlaveProto.SlaveResponse getDefaultInstanceForType() {
+        return robin.protobuf.SlaveProto.SlaveResponse.getDefaultInstance();
       }
 
-      @Override
-      public SlaveResponse build() {
-        SlaveResponse result = buildPartial();
+      @java.lang.Override
+      public robin.protobuf.SlaveProto.SlaveResponse build() {
+        robin.protobuf.SlaveProto.SlaveResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @Override
-      public SlaveResponse buildPartial() {
-        SlaveResponse result = new SlaveResponse(this);
+      @java.lang.Override
+      public robin.protobuf.SlaveProto.SlaveResponse buildPartial() {
+        robin.protobuf.SlaveProto.SlaveResponse result = new robin.protobuf.SlaveProto.SlaveResponse(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -1813,50 +1039,50 @@ public final class SlaveProto {
         return result;
       }
 
-      @Override
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
-      @Override
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
-      @Override
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
-      @Override
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
-      @Override
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof SlaveResponse) {
-          return mergeFrom((SlaveResponse)other);
+        if (other instanceof robin.protobuf.SlaveProto.SlaveResponse) {
+          return mergeFrom((robin.protobuf.SlaveProto.SlaveResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(SlaveResponse other) {
-        if (other == SlaveResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(robin.protobuf.SlaveProto.SlaveResponse other) {
+        if (other == robin.protobuf.SlaveProto.SlaveResponse.getDefaultInstance()) return this;
         if (other.hasVersion()) {
           setVersion(other.getVersion());
         }
@@ -1894,7 +1120,7 @@ public final class SlaveProto {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public final boolean isInitialized() {
         if (!hasVersion()) {
           return false;
@@ -1910,16 +1136,16 @@ public final class SlaveProto {
         return true;
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        SlaveResponse parsedMessage = null;
+        robin.protobuf.SlaveProto.SlaveResponse parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (SlaveResponse) e.getUnfinishedMessage();
+          parsedMessage = (robin.protobuf.SlaveProto.SlaveResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1994,22 +1220,22 @@ public final class SlaveProto {
         return this;
       }
 
-      private java.util.List<RobinRequest> data_ =
+      private java.util.List<robin.protobuf.RobinRequestProto.RobinRequest> data_ =
         java.util.Collections.emptyList();
       private void ensureDataIsMutable() {
         if (!((bitField0_ & 0x00000004) == 0x00000004)) {
-          data_ = new java.util.ArrayList<RobinRequest>(data_);
+          data_ = new java.util.ArrayList<robin.protobuf.RobinRequestProto.RobinRequest>(data_);
           bitField0_ |= 0x00000004;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          RobinRequest, RobinRequest.Builder, RobinRequestOrBuilder> dataBuilder_;
+          robin.protobuf.RobinRequestProto.RobinRequest, robin.protobuf.RobinRequestProto.RobinRequest.Builder, robin.protobuf.RobinRequestProto.RobinRequestOrBuilder> dataBuilder_;
 
       /**
-       * <code>repeated .SlaveResponse.RobinRequest data = 3;</code>
+       * <code>repeated .robin.protobuf.RobinRequest data = 3;</code>
        */
-      public java.util.List<RobinRequest> getDataList() {
+      public java.util.List<robin.protobuf.RobinRequestProto.RobinRequest> getDataList() {
         if (dataBuilder_ == null) {
           return java.util.Collections.unmodifiableList(data_);
         } else {
@@ -2017,7 +1243,7 @@ public final class SlaveProto {
         }
       }
       /**
-       * <code>repeated .SlaveResponse.RobinRequest data = 3;</code>
+       * <code>repeated .robin.protobuf.RobinRequest data = 3;</code>
        */
       public int getDataCount() {
         if (dataBuilder_ == null) {
@@ -2027,9 +1253,9 @@ public final class SlaveProto {
         }
       }
       /**
-       * <code>repeated .SlaveResponse.RobinRequest data = 3;</code>
+       * <code>repeated .robin.protobuf.RobinRequest data = 3;</code>
        */
-      public RobinRequest getData(int index) {
+      public robin.protobuf.RobinRequestProto.RobinRequest getData(int index) {
         if (dataBuilder_ == null) {
           return data_.get(index);
         } else {
@@ -2037,10 +1263,10 @@ public final class SlaveProto {
         }
       }
       /**
-       * <code>repeated .SlaveResponse.RobinRequest data = 3;</code>
+       * <code>repeated .robin.protobuf.RobinRequest data = 3;</code>
        */
       public Builder setData(
-          int index, RobinRequest value) {
+          int index, robin.protobuf.RobinRequestProto.RobinRequest value) {
         if (dataBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2054,10 +1280,10 @@ public final class SlaveProto {
         return this;
       }
       /**
-       * <code>repeated .SlaveResponse.RobinRequest data = 3;</code>
+       * <code>repeated .robin.protobuf.RobinRequest data = 3;</code>
        */
       public Builder setData(
-          int index, RobinRequest.Builder builderForValue) {
+          int index, robin.protobuf.RobinRequestProto.RobinRequest.Builder builderForValue) {
         if (dataBuilder_ == null) {
           ensureDataIsMutable();
           data_.set(index, builderForValue.build());
@@ -2068,9 +1294,9 @@ public final class SlaveProto {
         return this;
       }
       /**
-       * <code>repeated .SlaveResponse.RobinRequest data = 3;</code>
+       * <code>repeated .robin.protobuf.RobinRequest data = 3;</code>
        */
-      public Builder addData(RobinRequest value) {
+      public Builder addData(robin.protobuf.RobinRequestProto.RobinRequest value) {
         if (dataBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2084,10 +1310,10 @@ public final class SlaveProto {
         return this;
       }
       /**
-       * <code>repeated .SlaveResponse.RobinRequest data = 3;</code>
+       * <code>repeated .robin.protobuf.RobinRequest data = 3;</code>
        */
       public Builder addData(
-          int index, RobinRequest value) {
+          int index, robin.protobuf.RobinRequestProto.RobinRequest value) {
         if (dataBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2101,10 +1327,10 @@ public final class SlaveProto {
         return this;
       }
       /**
-       * <code>repeated .SlaveResponse.RobinRequest data = 3;</code>
+       * <code>repeated .robin.protobuf.RobinRequest data = 3;</code>
        */
       public Builder addData(
-          RobinRequest.Builder builderForValue) {
+          robin.protobuf.RobinRequestProto.RobinRequest.Builder builderForValue) {
         if (dataBuilder_ == null) {
           ensureDataIsMutable();
           data_.add(builderForValue.build());
@@ -2115,10 +1341,10 @@ public final class SlaveProto {
         return this;
       }
       /**
-       * <code>repeated .SlaveResponse.RobinRequest data = 3;</code>
+       * <code>repeated .robin.protobuf.RobinRequest data = 3;</code>
        */
       public Builder addData(
-          int index, RobinRequest.Builder builderForValue) {
+          int index, robin.protobuf.RobinRequestProto.RobinRequest.Builder builderForValue) {
         if (dataBuilder_ == null) {
           ensureDataIsMutable();
           data_.add(index, builderForValue.build());
@@ -2129,10 +1355,10 @@ public final class SlaveProto {
         return this;
       }
       /**
-       * <code>repeated .SlaveResponse.RobinRequest data = 3;</code>
+       * <code>repeated .robin.protobuf.RobinRequest data = 3;</code>
        */
       public Builder addAllData(
-          Iterable<? extends RobinRequest> values) {
+          java.lang.Iterable<? extends robin.protobuf.RobinRequestProto.RobinRequest> values) {
         if (dataBuilder_ == null) {
           ensureDataIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -2144,7 +1370,7 @@ public final class SlaveProto {
         return this;
       }
       /**
-       * <code>repeated .SlaveResponse.RobinRequest data = 3;</code>
+       * <code>repeated .robin.protobuf.RobinRequest data = 3;</code>
        */
       public Builder clearData() {
         if (dataBuilder_ == null) {
@@ -2157,7 +1383,7 @@ public final class SlaveProto {
         return this;
       }
       /**
-       * <code>repeated .SlaveResponse.RobinRequest data = 3;</code>
+       * <code>repeated .robin.protobuf.RobinRequest data = 3;</code>
        */
       public Builder removeData(int index) {
         if (dataBuilder_ == null) {
@@ -2170,16 +1396,16 @@ public final class SlaveProto {
         return this;
       }
       /**
-       * <code>repeated .SlaveResponse.RobinRequest data = 3;</code>
+       * <code>repeated .robin.protobuf.RobinRequest data = 3;</code>
        */
-      public RobinRequest.Builder getDataBuilder(
+      public robin.protobuf.RobinRequestProto.RobinRequest.Builder getDataBuilder(
           int index) {
         return getDataFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .SlaveResponse.RobinRequest data = 3;</code>
+       * <code>repeated .robin.protobuf.RobinRequest data = 3;</code>
        */
-      public RobinRequestOrBuilder getDataOrBuilder(
+      public robin.protobuf.RobinRequestProto.RobinRequestOrBuilder getDataOrBuilder(
           int index) {
         if (dataBuilder_ == null) {
           return data_.get(index);  } else {
@@ -2187,9 +1413,9 @@ public final class SlaveProto {
         }
       }
       /**
-       * <code>repeated .SlaveResponse.RobinRequest data = 3;</code>
+       * <code>repeated .robin.protobuf.RobinRequest data = 3;</code>
        */
-      public java.util.List<? extends RobinRequestOrBuilder>
+      public java.util.List<? extends robin.protobuf.RobinRequestProto.RobinRequestOrBuilder> 
            getDataOrBuilderList() {
         if (dataBuilder_ != null) {
           return dataBuilder_.getMessageOrBuilderList();
@@ -2198,33 +1424,33 @@ public final class SlaveProto {
         }
       }
       /**
-       * <code>repeated .SlaveResponse.RobinRequest data = 3;</code>
+       * <code>repeated .robin.protobuf.RobinRequest data = 3;</code>
        */
-      public RobinRequest.Builder addDataBuilder() {
+      public robin.protobuf.RobinRequestProto.RobinRequest.Builder addDataBuilder() {
         return getDataFieldBuilder().addBuilder(
-            RobinRequest.getDefaultInstance());
+            robin.protobuf.RobinRequestProto.RobinRequest.getDefaultInstance());
       }
       /**
-       * <code>repeated .SlaveResponse.RobinRequest data = 3;</code>
+       * <code>repeated .robin.protobuf.RobinRequest data = 3;</code>
        */
-      public RobinRequest.Builder addDataBuilder(
+      public robin.protobuf.RobinRequestProto.RobinRequest.Builder addDataBuilder(
           int index) {
         return getDataFieldBuilder().addBuilder(
-            index, RobinRequest.getDefaultInstance());
+            index, robin.protobuf.RobinRequestProto.RobinRequest.getDefaultInstance());
       }
       /**
-       * <code>repeated .SlaveResponse.RobinRequest data = 3;</code>
+       * <code>repeated .robin.protobuf.RobinRequest data = 3;</code>
        */
-      public java.util.List<RobinRequest.Builder>
+      public java.util.List<robin.protobuf.RobinRequestProto.RobinRequest.Builder> 
            getDataBuilderList() {
         return getDataFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          RobinRequest, RobinRequest.Builder, RobinRequestOrBuilder>
+          robin.protobuf.RobinRequestProto.RobinRequest, robin.protobuf.RobinRequestProto.RobinRequest.Builder, robin.protobuf.RobinRequestProto.RobinRequestOrBuilder> 
           getDataFieldBuilder() {
         if (dataBuilder_ == null) {
           dataBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              RobinRequest, RobinRequest.Builder, RobinRequestOrBuilder>(
+              robin.protobuf.RobinRequestProto.RobinRequest, robin.protobuf.RobinRequestProto.RobinRequest.Builder, robin.protobuf.RobinRequestProto.RobinRequestOrBuilder>(
                   data_,
                   ((bitField0_ & 0x00000004) == 0x00000004),
                   getParentForChildren(),
@@ -2233,35 +1459,35 @@ public final class SlaveProto {
         }
         return dataBuilder_;
       }
-      @Override
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @Override
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
 
-      // @@protoc_insertion_point(builder_scope:SlaveResponse)
+      // @@protoc_insertion_point(builder_scope:robin.protobuf.SlaveResponse)
     }
 
-    // @@protoc_insertion_point(class_scope:SlaveResponse)
-    private static final SlaveResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:robin.protobuf.SlaveResponse)
+    private static final robin.protobuf.SlaveProto.SlaveResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new SlaveResponse();
+      DEFAULT_INSTANCE = new robin.protobuf.SlaveProto.SlaveResponse();
     }
 
-    public static SlaveResponse getDefaultInstance() {
+    public static robin.protobuf.SlaveProto.SlaveResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    @Deprecated public static final com.google.protobuf.Parser<SlaveResponse>
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<SlaveResponse>
         PARSER = new com.google.protobuf.AbstractParser<SlaveResponse>() {
-      @Override
+      @java.lang.Override
       public SlaveResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2274,33 +1500,28 @@ public final class SlaveProto {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<SlaveResponse> getParserForType() {
       return PARSER;
     }
 
-    @Override
-    public SlaveResponse getDefaultInstanceForType() {
+    @java.lang.Override
+    public robin.protobuf.SlaveProto.SlaveResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_SlaveRequest_descriptor;
+    internal_static_robin_protobuf_SlaveRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_SlaveRequest_fieldAccessorTable;
+      internal_static_robin_protobuf_SlaveRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_SlaveResponse_descriptor;
+    internal_static_robin_protobuf_SlaveResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_SlaveResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_SlaveResponse_RobinRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_SlaveResponse_RobinRequest_fieldAccessorTable;
+      internal_static_robin_protobuf_SlaveResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2309,13 +1530,13 @@ public final class SlaveProto {
   private static  com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
-    String[] descriptorData = {
-      "\n\023slave_req_res.proto\"\037\n\014SlaveRequest\022\017\n" +
-      "\007version\030\001 \002(\003\"\223\001\n\rSlaveResponse\022\017\n\007vers" +
-      "ion\030\001 \002(\003\022\n\n\002op\030\002 \002(\005\022)\n\004data\030\003 \003(\0132\033.Sl" +
-      "aveResponse.RobinRequest\032:\n\014RobinRequest" +
-      "\022\014\n\004type\030\001 \002(\005\022\013\n\003key\030\002 \002(\t\022\017\n\007content\030\003" +
-      " \001(\014B\034\n\016robin.protobufB\nSlaveProto"
+    java.lang.String[] descriptorData = {
+      "\n\023slave_req_res.proto\022\016robin.protobuf\032\023r" +
+      "obin_req_res.proto\"\037\n\014SlaveRequest\022\017\n\007ve" +
+      "rsion\030\001 \002(\003\"X\n\rSlaveResponse\022\017\n\007version\030" +
+      "\001 \002(\003\022\n\n\002op\030\002 \002(\005\022*\n\004data\030\003 \003(\0132\034.robin." +
+      "protobuf.RobinRequestB\034\n\016robin.protobufB" +
+      "\nSlaveProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2328,25 +1549,21 @@ public final class SlaveProto {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          robin.protobuf.RobinRequestProto.getDescriptor(),
         }, assigner);
-    internal_static_SlaveRequest_descriptor =
+    internal_static_robin_protobuf_SlaveRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_SlaveRequest_fieldAccessorTable = new
+    internal_static_robin_protobuf_SlaveRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_SlaveRequest_descriptor,
-        new String[] { "Version", });
-    internal_static_SlaveResponse_descriptor =
+        internal_static_robin_protobuf_SlaveRequest_descriptor,
+        new java.lang.String[] { "Version", });
+    internal_static_robin_protobuf_SlaveResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_SlaveResponse_fieldAccessorTable = new
+    internal_static_robin_protobuf_SlaveResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_SlaveResponse_descriptor,
-        new String[] { "Version", "Op", "Data", });
-    internal_static_SlaveResponse_RobinRequest_descriptor =
-      internal_static_SlaveResponse_descriptor.getNestedTypes().get(0);
-    internal_static_SlaveResponse_RobinRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_SlaveResponse_RobinRequest_descriptor,
-        new String[] { "Type", "Key", "Content", });
+        internal_static_robin_protobuf_SlaveResponse_descriptor,
+        new java.lang.String[] { "Version", "Op", "Data", });
+    robin.protobuf.RobinRequestProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

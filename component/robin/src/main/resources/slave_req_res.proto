@@ -1,19 +1,18 @@
 syntax = "proto2";
 
+package robin.protobuf;
+
 option java_package = "robin.protobuf";
 option java_outer_classname = "SlaveProto";
+
+import "robin_req_res.proto";
 
 message SlaveRequest {
   required int64 version = 1;
 }
 
 message SlaveResponse {
-  message RobinRequest {
-    required int32 type = 1;
-    required string key = 2;
-    optional bytes content = 3;
-  }
   required int64 version = 1;
   required int32 op = 2;
-  repeated RobinRequest data = 3;
+  repeated robin.protobuf.RobinRequest data = 3;
 }

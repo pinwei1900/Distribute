@@ -1,5 +1,7 @@
 syntax = "proto2";
 
+package robin.protobuf;
+
 option java_package = "robin.protobuf";
 option java_outer_classname = "RobinRequestProto";
 

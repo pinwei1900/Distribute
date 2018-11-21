@@ -9,9 +9,9 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import org.junit.Test;
 import robin.backup.BinLogger;
+import robin.protobuf.RobinRequestProto.RobinRequest;
 import robin.protobuf.SlaveProto.SlaveResponse;
 import robin.protobuf.SlaveProto.SlaveResponse.Builder;
-import robin.protobuf.SlaveProto.SlaveResponse.RobinRequest;
 
 /**
  * @Description
@@ -22,8 +22,6 @@ import robin.protobuf.SlaveProto.SlaveResponse.RobinRequest;
 public class BinlogTest {
 
     BinLogger binLogger;
-
-
 
     @Test
     public void writeTest() throws IOException {

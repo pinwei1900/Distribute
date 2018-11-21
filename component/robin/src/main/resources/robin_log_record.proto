@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+package robin.protobuf;
+
+option java_package = "robin.protobuf";
+option java_outer_classname = "RonbinLoggerProto";
+
+import "robin_req_res.proto";
+
+message RonbinRecord {
+  required int64 version = 1;
+  required robin.protobuf.RobinRequest request = 2;
+}
