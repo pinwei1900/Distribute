@@ -29,17 +29,14 @@ public class SlaveService {
     @PostConstruct
     public void run() throws IOException {
         ServerSocket serverSocket = new ServerSocket(port);
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                Socket socket;
-                while (true) {
-                    try {
-                        socket = serverSocket.accept();
-                        slaveHandler(socket);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
+        new Thread(() -> {
+            Socket socket;
+            while (true) {
+                try {
+                    socket = serverSocket.accept();
+                    slaveHandler(socket);
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
             }
         });

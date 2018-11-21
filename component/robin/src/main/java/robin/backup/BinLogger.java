@@ -31,6 +31,8 @@ public class BinLogger {
     private File binFile;
     private LinkedBlockingDeque<RobinRequest> binQueue;
 
+    /** 输出流只能有一个，用于顺序写操作日志 */
+    private FileOutputStream out;
 
     @PostConstruct
     public void logger() throws IOException {
@@ -39,17 +41,18 @@ public class BinLogger {
             binFile.createNewFile();
         }
         binQueue = new LinkedBlockingDeque<>();
+        out = new FileOutputStream(binFile, true);
 
         new Thread(() -> {
             while (true) {
                 try {
                     RobinRequest request = binQueue.take();
-                    request.writeDelimitedTo(out());
+                    request.writeDelimitedTo(out);
                 } catch (InterruptedException | IOException e) {
                     e.printStackTrace();
                 }
             }
-        }).start();
+        }, "record-storage-update").start();
     }
 
     public void append(RobinRequest request) {
@@ -60,10 +63,8 @@ public class BinLogger {
         }
     }
 
-    public OutputStream out() throws FileNotFoundException {
-        return new FileOutputStream(binFile,true);
-    }
-
+    /**
+     * 返回文件的输入流，需要手动关闭此流  */
     public InputStream in() throws FileNotFoundException {
         return new FileInputStream(binFile);
     }

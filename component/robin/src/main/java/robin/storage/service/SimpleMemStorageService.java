@@ -33,12 +33,10 @@ public class SimpleMemStorageService implements StorageService {
 
     private ConcurrentHashMap<String, ObjectEntry> memStore = new ConcurrentHashMap<>();
     private AtomicLong version = new AtomicLong(0);
-
     private Lock lock = new ReentrantLock();
 
     @Autowired
     private BinLogger binLogger;
-
 
     @PostConstruct
     public void warmUp() throws IOException {
