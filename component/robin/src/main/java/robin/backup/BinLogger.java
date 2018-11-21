@@ -76,6 +76,11 @@ public class BinLogger {
         return new FileInputStream(binFile);
     }
 
+
+    /**
+     * 不要调用此方法
+     * @return
+     */
     public OutputStream out() {
         return out;
     }
