@@ -51,7 +51,6 @@ public class FileStreamTest {
     @Test
     public void inTest() throws InterruptedException {
         new Thread(() -> {
-
             InputStream in = null;
             try {
                 in = getIn();
@@ -83,6 +82,44 @@ public class FileStreamTest {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+            }
+        }).start();
+
+        Thread.sleep(1000000);
+    }
+
+
+    @Test
+    public void in_outTest() throws InterruptedException {
+        new Thread(() -> {
+            InputStream in = null;
+            try {
+                in = getIn();
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+            while (true) {
+                try {
+                    int b = in.read();
+                    System.out.println("1:" + b);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+
+        new Thread(() -> {
+            try {
+                BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(getOut()));
+
+                int i = 0;
+                while (true) {
+                    writer.write(i++);
+                    writer.flush();
+                }
+
+            } catch (IOException e) {
+                e.printStackTrace();
             }
         }).start();
 

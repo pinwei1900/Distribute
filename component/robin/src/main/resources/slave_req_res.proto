@@ -8,7 +8,9 @@ option java_outer_classname = "SlaveProto";
 import "robin_req_res.proto";
 
 message SlaveRequest {
-  required int64 version = 1;
+  required string name = 1;
+  required int32 type = 2;
+  required int64 version = 3;
 }
 
 message SlaveResponse {

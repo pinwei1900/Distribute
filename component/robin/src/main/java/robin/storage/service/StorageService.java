@@ -20,5 +20,8 @@ public interface StorageService {
 
     ObjectEntry get(String key);
 
+    /** 返回当前已经写入日志的版本 */
     long version();
+
+    void put(String key, ObjectEntry value);
 }

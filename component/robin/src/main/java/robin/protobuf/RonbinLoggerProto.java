@@ -34,11 +34,11 @@ public final class RonbinLoggerProto {
     /**
      * <code>required .robin.protobuf.RobinRequest request = 2;</code>
      */
-    robin.protobuf.RobinRequestProto.RobinRequest getRequest();
+    RobinRequestProto.RobinRequest getRequest();
     /**
      * <code>required .robin.protobuf.RobinRequest request = 2;</code>
      */
-    robin.protobuf.RobinRequestProto.RobinRequestOrBuilder getRequestOrBuilder();
+    RobinRequestProto.RobinRequestOrBuilder getRequestOrBuilder();
   }
   /**
    * Protobuf type {@code robin.protobuf.RonbinRecord}
@@ -56,7 +56,7 @@ public final class RonbinLoggerProto {
       version_ = 0L;
     }
 
-    @java.lang.Override
+    @Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -67,7 +67,7 @@ public final class RonbinLoggerProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException();
       }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
@@ -86,11 +86,11 @@ public final class RonbinLoggerProto {
               break;
             }
             case 18: {
-              robin.protobuf.RobinRequestProto.RobinRequest.Builder subBuilder = null;
+              RobinRequestProto.RobinRequest.Builder subBuilder = null;
               if (((bitField0_ & 0x00000002) == 0x00000002)) {
                 subBuilder = request_.toBuilder();
               }
-              request_ = input.readMessage(robin.protobuf.RobinRequestProto.RobinRequest.PARSER, extensionRegistry);
+              request_ = input.readMessage(RobinRequestProto.RobinRequest.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(request_);
                 request_ = subBuilder.buildPartial();
@@ -119,15 +119,15 @@ public final class RonbinLoggerProto {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return robin.protobuf.RonbinLoggerProto.internal_static_robin_protobuf_RonbinRecord_descriptor;
+      return RonbinLoggerProto.internal_static_robin_protobuf_RonbinRecord_descriptor;
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    @Override
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return robin.protobuf.RonbinLoggerProto.internal_static_robin_protobuf_RonbinRecord_fieldAccessorTable
+      return RonbinLoggerProto.internal_static_robin_protobuf_RonbinRecord_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              robin.protobuf.RonbinLoggerProto.RonbinRecord.class, robin.protobuf.RonbinLoggerProto.RonbinRecord.Builder.class);
+              RonbinRecord.class, Builder.class);
     }
 
     private int bitField0_;
@@ -147,7 +147,7 @@ public final class RonbinLoggerProto {
     }
 
     public static final int REQUEST_FIELD_NUMBER = 2;
-    private robin.protobuf.RobinRequestProto.RobinRequest request_;
+    private RobinRequestProto.RobinRequest request_;
     /**
      * <code>required .robin.protobuf.RobinRequest request = 2;</code>
      */
@@ -157,18 +157,18 @@ public final class RonbinLoggerProto {
     /**
      * <code>required .robin.protobuf.RobinRequest request = 2;</code>
      */
-    public robin.protobuf.RobinRequestProto.RobinRequest getRequest() {
-      return request_ == null ? robin.protobuf.RobinRequestProto.RobinRequest.getDefaultInstance() : request_;
+    public RobinRequestProto.RobinRequest getRequest() {
+      return request_ == null ? RobinRequestProto.RobinRequest.getDefaultInstance() : request_;
     }
     /**
      * <code>required .robin.protobuf.RobinRequest request = 2;</code>
      */
-    public robin.protobuf.RobinRequestProto.RobinRequestOrBuilder getRequestOrBuilder() {
-      return request_ == null ? robin.protobuf.RobinRequestProto.RobinRequest.getDefaultInstance() : request_;
+    public RobinRequestProto.RobinRequestOrBuilder getRequestOrBuilder() {
+      return request_ == null ? RobinRequestProto.RobinRequest.getDefaultInstance() : request_;
     }
 
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -190,7 +190,7 @@ public final class RonbinLoggerProto {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -202,7 +202,7 @@ public final class RonbinLoggerProto {
       unknownFields.writeTo(output);
     }
 
-    @java.lang.Override
+    @Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -221,15 +221,15 @@ public final class RonbinLoggerProto {
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof robin.protobuf.RonbinLoggerProto.RonbinRecord)) {
+      if (!(obj instanceof RonbinRecord)) {
         return super.equals(obj);
       }
-      robin.protobuf.RonbinLoggerProto.RonbinRecord other = (robin.protobuf.RonbinLoggerProto.RonbinRecord) obj;
+      RonbinRecord other = (RonbinRecord) obj;
 
       boolean result = true;
       result = result && (hasVersion() == other.hasVersion());
@@ -246,7 +246,7 @@ public final class RonbinLoggerProto {
       return result;
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -267,69 +267,69 @@ public final class RonbinLoggerProto {
       return hash;
     }
 
-    public static robin.protobuf.RonbinLoggerProto.RonbinRecord parseFrom(
+    public static RonbinRecord parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static robin.protobuf.RonbinLoggerProto.RonbinRecord parseFrom(
+    public static RonbinRecord parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static robin.protobuf.RonbinLoggerProto.RonbinRecord parseFrom(
+    public static RonbinRecord parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static robin.protobuf.RonbinLoggerProto.RonbinRecord parseFrom(
+    public static RonbinRecord parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static robin.protobuf.RonbinLoggerProto.RonbinRecord parseFrom(byte[] data)
+    public static RonbinRecord parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static robin.protobuf.RonbinLoggerProto.RonbinRecord parseFrom(
+    public static RonbinRecord parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static robin.protobuf.RonbinLoggerProto.RonbinRecord parseFrom(java.io.InputStream input)
+    public static RonbinRecord parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static robin.protobuf.RonbinLoggerProto.RonbinRecord parseFrom(
+    public static RonbinRecord parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static robin.protobuf.RonbinLoggerProto.RonbinRecord parseDelimitedFrom(java.io.InputStream input)
+    public static RonbinRecord parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static robin.protobuf.RonbinLoggerProto.RonbinRecord parseDelimitedFrom(
+    public static RonbinRecord parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static robin.protobuf.RonbinLoggerProto.RonbinRecord parseFrom(
+    public static RonbinRecord parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static robin.protobuf.RonbinLoggerProto.RonbinRecord parseFrom(
+    public static RonbinRecord parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -337,23 +337,23 @@ public final class RonbinLoggerProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
+    @Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(robin.protobuf.RonbinLoggerProto.RonbinRecord prototype) {
+    public static Builder newBuilder(RonbinRecord prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
+    @Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -363,18 +363,18 @@ public final class RonbinLoggerProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:robin.protobuf.RonbinRecord)
-        robin.protobuf.RonbinLoggerProto.RonbinRecordOrBuilder {
+        RonbinRecordOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return robin.protobuf.RonbinLoggerProto.internal_static_robin_protobuf_RonbinRecord_descriptor;
+        return RonbinLoggerProto.internal_static_robin_protobuf_RonbinRecord_descriptor;
       }
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      @Override
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return robin.protobuf.RonbinLoggerProto.internal_static_robin_protobuf_RonbinRecord_fieldAccessorTable
+        return RonbinLoggerProto.internal_static_robin_protobuf_RonbinRecord_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                robin.protobuf.RonbinLoggerProto.RonbinRecord.class, robin.protobuf.RonbinLoggerProto.RonbinRecord.Builder.class);
+                RonbinRecord.class, Builder.class);
       }
 
       // Construct using robin.protobuf.RonbinLoggerProto.RonbinRecord.newBuilder()
@@ -383,7 +383,7 @@ public final class RonbinLoggerProto {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -393,7 +393,7 @@ public final class RonbinLoggerProto {
           getRequestFieldBuilder();
         }
       }
-      @java.lang.Override
+      @Override
       public Builder clear() {
         super.clear();
         version_ = 0L;
@@ -407,29 +407,29 @@ public final class RonbinLoggerProto {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return robin.protobuf.RonbinLoggerProto.internal_static_robin_protobuf_RonbinRecord_descriptor;
+        return RonbinLoggerProto.internal_static_robin_protobuf_RonbinRecord_descriptor;
       }
 
-      @java.lang.Override
-      public robin.protobuf.RonbinLoggerProto.RonbinRecord getDefaultInstanceForType() {
-        return robin.protobuf.RonbinLoggerProto.RonbinRecord.getDefaultInstance();
+      @Override
+      public RonbinRecord getDefaultInstanceForType() {
+        return RonbinRecord.getDefaultInstance();
       }
 
-      @java.lang.Override
-      public robin.protobuf.RonbinLoggerProto.RonbinRecord build() {
-        robin.protobuf.RonbinLoggerProto.RonbinRecord result = buildPartial();
+      @Override
+      public RonbinRecord build() {
+        RonbinRecord result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @java.lang.Override
-      public robin.protobuf.RonbinLoggerProto.RonbinRecord buildPartial() {
-        robin.protobuf.RonbinLoggerProto.RonbinRecord result = new robin.protobuf.RonbinLoggerProto.RonbinRecord(this);
+      @Override
+      public RonbinRecord buildPartial() {
+        RonbinRecord result = new RonbinRecord(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -449,50 +449,50 @@ public final class RonbinLoggerProto {
         return result;
       }
 
-      @java.lang.Override
+      @Override
       public Builder clone() {
         return (Builder) super.clone();
       }
-      @java.lang.Override
+      @Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return (Builder) super.setField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
-      @java.lang.Override
+      @Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
-      @java.lang.Override
+      @Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index, Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
-      @java.lang.Override
+      @Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof robin.protobuf.RonbinLoggerProto.RonbinRecord) {
-          return mergeFrom((robin.protobuf.RonbinLoggerProto.RonbinRecord)other);
+        if (other instanceof RonbinRecord) {
+          return mergeFrom((RonbinRecord)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(robin.protobuf.RonbinLoggerProto.RonbinRecord other) {
-        if (other == robin.protobuf.RonbinLoggerProto.RonbinRecord.getDefaultInstance()) return this;
+      public Builder mergeFrom(RonbinRecord other) {
+        if (other == RonbinRecord.getDefaultInstance()) return this;
         if (other.hasVersion()) {
           setVersion(other.getVersion());
         }
@@ -504,7 +504,7 @@ public final class RonbinLoggerProto {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final boolean isInitialized() {
         if (!hasVersion()) {
           return false;
@@ -518,16 +518,16 @@ public final class RonbinLoggerProto {
         return true;
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        robin.protobuf.RonbinLoggerProto.RonbinRecord parsedMessage = null;
+        RonbinRecord parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (robin.protobuf.RonbinLoggerProto.RonbinRecord) e.getUnfinishedMessage();
+          parsedMessage = (RonbinRecord) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -570,9 +570,9 @@ public final class RonbinLoggerProto {
         return this;
       }
 
-      private robin.protobuf.RobinRequestProto.RobinRequest request_ = null;
+      private RobinRequestProto.RobinRequest request_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          robin.protobuf.RobinRequestProto.RobinRequest, robin.protobuf.RobinRequestProto.RobinRequest.Builder, robin.protobuf.RobinRequestProto.RobinRequestOrBuilder> requestBuilder_;
+          RobinRequestProto.RobinRequest, RobinRequestProto.RobinRequest.Builder, RobinRequestProto.RobinRequestOrBuilder> requestBuilder_;
       /**
        * <code>required .robin.protobuf.RobinRequest request = 2;</code>
        */
@@ -582,9 +582,9 @@ public final class RonbinLoggerProto {
       /**
        * <code>required .robin.protobuf.RobinRequest request = 2;</code>
        */
-      public robin.protobuf.RobinRequestProto.RobinRequest getRequest() {
+      public RobinRequestProto.RobinRequest getRequest() {
         if (requestBuilder_ == null) {
-          return request_ == null ? robin.protobuf.RobinRequestProto.RobinRequest.getDefaultInstance() : request_;
+          return request_ == null ? RobinRequestProto.RobinRequest.getDefaultInstance() : request_;
         } else {
           return requestBuilder_.getMessage();
         }
@@ -592,7 +592,7 @@ public final class RonbinLoggerProto {
       /**
        * <code>required .robin.protobuf.RobinRequest request = 2;</code>
        */
-      public Builder setRequest(robin.protobuf.RobinRequestProto.RobinRequest value) {
+      public Builder setRequest(RobinRequestProto.RobinRequest value) {
         if (requestBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -609,7 +609,7 @@ public final class RonbinLoggerProto {
        * <code>required .robin.protobuf.RobinRequest request = 2;</code>
        */
       public Builder setRequest(
-          robin.protobuf.RobinRequestProto.RobinRequest.Builder builderForValue) {
+          RobinRequestProto.RobinRequest.Builder builderForValue) {
         if (requestBuilder_ == null) {
           request_ = builderForValue.build();
           onChanged();
@@ -622,13 +622,13 @@ public final class RonbinLoggerProto {
       /**
        * <code>required .robin.protobuf.RobinRequest request = 2;</code>
        */
-      public Builder mergeRequest(robin.protobuf.RobinRequestProto.RobinRequest value) {
+      public Builder mergeRequest(RobinRequestProto.RobinRequest value) {
         if (requestBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
               request_ != null &&
-              request_ != robin.protobuf.RobinRequestProto.RobinRequest.getDefaultInstance()) {
+              request_ != RobinRequestProto.RobinRequest.getDefaultInstance()) {
             request_ =
-              robin.protobuf.RobinRequestProto.RobinRequest.newBuilder(request_).mergeFrom(value).buildPartial();
+              RobinRequestProto.RobinRequest.newBuilder(request_).mergeFrom(value).buildPartial();
           } else {
             request_ = value;
           }
@@ -655,7 +655,7 @@ public final class RonbinLoggerProto {
       /**
        * <code>required .robin.protobuf.RobinRequest request = 2;</code>
        */
-      public robin.protobuf.RobinRequestProto.RobinRequest.Builder getRequestBuilder() {
+      public RobinRequestProto.RobinRequest.Builder getRequestBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getRequestFieldBuilder().getBuilder();
@@ -663,23 +663,23 @@ public final class RonbinLoggerProto {
       /**
        * <code>required .robin.protobuf.RobinRequest request = 2;</code>
        */
-      public robin.protobuf.RobinRequestProto.RobinRequestOrBuilder getRequestOrBuilder() {
+      public RobinRequestProto.RobinRequestOrBuilder getRequestOrBuilder() {
         if (requestBuilder_ != null) {
           return requestBuilder_.getMessageOrBuilder();
         } else {
           return request_ == null ?
-              robin.protobuf.RobinRequestProto.RobinRequest.getDefaultInstance() : request_;
+              RobinRequestProto.RobinRequest.getDefaultInstance() : request_;
         }
       }
       /**
        * <code>required .robin.protobuf.RobinRequest request = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          robin.protobuf.RobinRequestProto.RobinRequest, robin.protobuf.RobinRequestProto.RobinRequest.Builder, robin.protobuf.RobinRequestProto.RobinRequestOrBuilder> 
+          RobinRequestProto.RobinRequest, RobinRequestProto.RobinRequest.Builder, RobinRequestProto.RobinRequestOrBuilder>
           getRequestFieldBuilder() {
         if (requestBuilder_ == null) {
           requestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              robin.protobuf.RobinRequestProto.RobinRequest, robin.protobuf.RobinRequestProto.RobinRequest.Builder, robin.protobuf.RobinRequestProto.RobinRequestOrBuilder>(
+              RobinRequestProto.RobinRequest, RobinRequestProto.RobinRequest.Builder, RobinRequestProto.RobinRequestOrBuilder>(
                   getRequest(),
                   getParentForChildren(),
                   isClean());
@@ -687,13 +687,13 @@ public final class RonbinLoggerProto {
         }
         return requestBuilder_;
       }
-      @java.lang.Override
+      @Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @java.lang.Override
+      @Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -704,18 +704,18 @@ public final class RonbinLoggerProto {
     }
 
     // @@protoc_insertion_point(class_scope:robin.protobuf.RonbinRecord)
-    private static final robin.protobuf.RonbinLoggerProto.RonbinRecord DEFAULT_INSTANCE;
+    private static final RonbinRecord DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new robin.protobuf.RonbinLoggerProto.RonbinRecord();
+      DEFAULT_INSTANCE = new RonbinRecord();
     }
 
-    public static robin.protobuf.RonbinLoggerProto.RonbinRecord getDefaultInstance() {
+    public static RonbinRecord getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    @java.lang.Deprecated public static final com.google.protobuf.Parser<RonbinRecord>
+    @Deprecated public static final com.google.protobuf.Parser<RonbinRecord>
         PARSER = new com.google.protobuf.AbstractParser<RonbinRecord>() {
-      @java.lang.Override
+      @Override
       public RonbinRecord parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -728,13 +728,13 @@ public final class RonbinLoggerProto {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<RonbinRecord> getParserForType() {
       return PARSER;
     }
 
-    @java.lang.Override
-    public robin.protobuf.RonbinLoggerProto.RonbinRecord getDefaultInstanceForType() {
+    @Override
+    public RonbinRecord getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -753,7 +753,7 @@ public final class RonbinLoggerProto {
   private static  com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
-    java.lang.String[] descriptorData = {
+    String[] descriptorData = {
       "\n\026robin_log_record.proto\022\016robin.protobuf" +
       "\032\023robin_req_res.proto\"N\n\014RonbinRecord\022\017\n" +
       "\007version\030\001 \002(\003\022-\n\007request\030\002 \002(\0132\034.robin." +
@@ -771,15 +771,15 @@ public final class RonbinLoggerProto {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          robin.protobuf.RobinRequestProto.getDescriptor(),
+          RobinRequestProto.getDescriptor(),
         }, assigner);
     internal_static_robin_protobuf_RonbinRecord_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_robin_protobuf_RonbinRecord_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_robin_protobuf_RonbinRecord_descriptor,
-        new java.lang.String[] { "Version", "Request", });
-    robin.protobuf.RobinRequestProto.getDescriptor();
+        new String[] { "Version", "Request", });
+    RobinRequestProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

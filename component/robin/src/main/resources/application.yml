@@ -6,5 +6,7 @@ robin:
   port: 5010
   binlog:
     file: 'G:\Google Drive\workspace\binlog\data.data'
-  slave:
-    port: 5011
+#   如果是master则配置master数据
+  master:
+    backup:
+      port: 5011

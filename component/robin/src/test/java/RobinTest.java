@@ -42,6 +42,9 @@ public class RobinTest {
             request.writeDelimitedTo(out);
             RobinResponse response = RobinResponse.parseDelimitedFrom(in);
             response.getContent().writeTo(System.out);
+
+            System.out.println(socket.getRemoteSocketAddress());
+            System.out.println(socket.getLocalPort());
         }
     }
 

@@ -8,8 +8,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
 import javax.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +15,7 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.stereotype.Service;
 import robin.backup.BinLogger;
 import robin.protobuf.RobinRequestProto.RobinRequest;
+import robin.protobuf.RonbinLoggerProto.RonbinRecord;
 import robin.storage.anotition.SimpleStore;
 import robin.storage.entry.ObjectEntry;
 
@@ -31,9 +30,10 @@ import robin.storage.entry.ObjectEntry;
 @ConditionalOnBean(annotation = SimpleStore.class)
 public class SimpleMemStorageService implements StorageService {
 
-    private ConcurrentHashMap<String, ObjectEntry> memStore = new ConcurrentHashMap<>();
+    @Autowired
+    private ConcurrentHashMap<String, ObjectEntry> memStore;
+
     private AtomicLong version = new AtomicLong(0);
-    private Lock lock = new ReentrantLock();
 
     @Autowired
     private BinLogger binLogger;
@@ -41,20 +41,26 @@ public class SimpleMemStorageService implements StorageService {
     @PostConstruct
     public void warmUp() throws IOException {
         try (InputStream in = binLogger.in()) {
-            RobinRequest req;
-            while ((req = RobinRequest.parseDelimitedFrom(in)) != null) {
-                memStore.put(req.getKey(), new ObjectEntry(req.getContent().toByteArray()));
+            long initVersion = 0;
+            RonbinRecord record;
+            while ((record = RonbinRecord.parseDelimitedFrom(in)) != null) {
+                initVersion = record.getVersion();
+                RobinRequest request = record.getRequest();
+                memStore.put(request.getKey(), new ObjectEntry(request.getContent().toByteArray()));
             }
+            version.set(initVersion);
         }
     }
 
     @Override
-    public void store(RobinRequest request) {
-        /** 保证日志写入顺序 */
-        lock.lock();
-        memStore.put(request.getKey(), new ObjectEntry(request.getContent().toByteArray()));
-        binLogger.append(version.get(), request);
-        lock.unlock();
+    public synchronized void store(RobinRequest request) {
+        /** 使用同步等待异步执行的方法，只有写入到文件中之后，才能写入到内存之中 */
+        try {
+            binLogger.append(version.getAndIncrement(), request);
+            memStore.put(request.getKey(), new ObjectEntry(request.getContent().toByteArray()));
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -63,7 +69,12 @@ public class SimpleMemStorageService implements StorageService {
     }
 
     @Override
-    public long version() {
+    public synchronized long version() {
         return version.get();
+    }
+
+    @Override
+    public void put(String key, ObjectEntry value) {
+        memStore.put(key, value);
     }
 }
