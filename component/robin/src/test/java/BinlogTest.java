@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import org.junit.Test;
-import robin.backup.BinLogger;
+import robin.bootstrap.BinLogger;
 import robin.protobuf.RobinRequestProto.RobinRequest;
 import robin.protobuf.SlaveProto.SlaveResponse;
 import robin.protobuf.SlaveProto.SlaveResponse.Builder;

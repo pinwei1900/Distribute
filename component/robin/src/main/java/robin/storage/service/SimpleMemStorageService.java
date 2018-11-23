@@ -13,7 +13,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.stereotype.Service;
-import robin.backup.BinLogger;
+import robin.bootstrap.BinLogger;
 import robin.protobuf.RobinRequestProto.RobinRequest;
 import robin.protobuf.RonbinLoggerProto.RonbinRecord;
 import robin.storage.anotition.SimpleStore;

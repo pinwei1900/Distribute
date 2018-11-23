@@ -2,7 +2,7 @@
  * Copyright (c) 2018年11月22日 by XuanWu Wireless Technology Co.Ltd.
  *             All rights reserved
  */
-package robin.backup;
+package robin.backup.master;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,6 +14,8 @@ import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+import robin.bootstrap.BinLogger;
+import robin.backup.enumtype.RequestType;
 import robin.protobuf.RobinRequestProto.RobinRequest;
 import robin.protobuf.SlaveProto;
 import robin.protobuf.SlaveProto.SlaveRequest;
@@ -31,17 +33,15 @@ import robin.utils.CurrentTimerMap;
 @Component
 public class HearBeat {
 
-    @Value("${robin.master.backup.port}")
-    Integer port = 5011;
-
     @Autowired
     StorageService storageService;
     @Autowired
     CurrentTimerMap<String, String> slaveServers;
-
     @Autowired
     BinLogger binLogger;
 
+    @Value("${robin.master.backup.port}")
+    Integer port = 5011;
 
     Builder resBuilder;
 
@@ -71,7 +71,7 @@ public class HearBeat {
             switch (type) {
                 case HEART_BEAT:
                     /**
-                     * 心跳检测，只需要更新服务器列表，并且发送返回信息即可
+                     * 心跳检测，只需要更新服务器列表，并且发送返回信息即可，要不要把间隔的数据传递回去？？？
                      */
                     slaveServers.put(request.getName(), request.getVersion() + "");
                     resBuilder.setVersion(storageService.version());

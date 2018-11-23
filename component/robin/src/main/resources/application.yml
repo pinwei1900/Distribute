@@ -10,3 +10,6 @@ robin:
   master:
     backup:
       port: 5011
+      ip: '127.0.0.1'
+      interval: 1
+      name: 'slave1'

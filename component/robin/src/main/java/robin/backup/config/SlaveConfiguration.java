@@ -21,7 +21,7 @@ public class SlaveConfiguration {
 
     @Bean
     public CurrentTimerMap slaveServers() {
-        return new CurrentTimerMap<String ,String >(30 * 1000);
+        return new CurrentTimerMap<String, String>(30 * 1000);
     }
 
     @Bean

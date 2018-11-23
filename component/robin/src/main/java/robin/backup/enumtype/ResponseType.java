@@ -2,7 +2,7 @@
  * Copyright (c) 2018年11月22日 by XuanWu Wireless Technology Co.Ltd.
  *             All rights reserved
  */
-package robin.backup;
+package robin.backup.enumtype;
 
 /**
  * @Description
@@ -11,9 +11,11 @@ package robin.backup;
  * @Version 1.0.0
  */
 public enum ResponseType {
-    heart_beat(1), sync(2);
 
-    int type;
+    /** 心跳检测，同步 */
+    HEART_BEAT(1), SYNC(2);
+
+    public int type;
 
     ResponseType(int type) {
         this.type = type;
